@@ -48,64 +48,8 @@ export function CleanEnergyParadox({ activeStep }: CleanEnergyParadoxProps) {
         </motion.div>
       )}
 
-      {/* Step 1: BLM breakdown */}
+      {/* Step 1: Offshore wind */}
       {activeStep >= 1 && (
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          <div className="text-sm text-[var(--muted)] mb-3">
-            BLM NEPA reviews: Clean Energy vs. Fossil Fuels
-          </div>
-          <div className="grid grid-cols-2 gap-4">
-            <div className="bg-[var(--accent)]/10 border border-[var(--accent)]/20 rounded-lg p-4">
-              <div className="text-xs text-[var(--accent)] mb-2">
-                Clean Energy
-              </div>
-              <div className="space-y-1.5">
-                <div className="flex justify-between text-sm">
-                  <span>EIS</span>
-                  <span className="font-bold text-[var(--accent)]">19</span>
-                </div>
-                <div className="flex justify-between text-sm">
-                  <span>EA</span>
-                  <span className="font-bold">9</span>
-                </div>
-                <div className="flex justify-between text-sm">
-                  <span>CE</span>
-                  <span className="font-bold">0</span>
-                </div>
-              </div>
-            </div>
-            <div className="bg-[var(--muted)]/10 border border-[var(--muted)]/20 rounded-lg p-4">
-              <div className="text-xs text-[var(--muted)] mb-2">
-                Fossil Fuels
-              </div>
-              <div className="space-y-1.5">
-                <div className="flex justify-between text-sm">
-                  <span>EIS</span>
-                  <span className="font-bold">5</span>
-                </div>
-                <div className="flex justify-between text-sm">
-                  <span>EA</span>
-                  <span className="font-bold">211</span>
-                </div>
-                <div className="flex justify-between text-sm">
-                  <span>CE</span>
-                  <span className="font-bold">76</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="mt-2 text-xs text-[var(--muted)]">
-            Clean energy projects are 3.8x more likely to require a full EIS
-          </div>
-        </motion.div>
-      )}
-
-      {/* Step 2: Offshore wind */}
-      {activeStep >= 2 && (
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -159,8 +103,8 @@ export function CleanEnergyParadox({ activeStep }: CleanEnergyParadoxProps) {
         </motion.div>
       )}
 
-      {/* Step 3: Geothermal reviews */}
-      {activeStep >= 3 && (
+      {/* Step 2: Geothermal reviews */}
+      {activeStep >= 2 && (
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

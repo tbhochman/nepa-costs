@@ -81,7 +81,7 @@ export function Hero() {
 
         <p className="text-lg md:text-xl text-[var(--muted)] max-w-2xl mx-auto mb-16 leading-relaxed">
           How the National Environmental Policy Act shapes the time, cost, and
-          outcome of American infrastructure — told through the best available data.
+          outcome of American infrastructure.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">

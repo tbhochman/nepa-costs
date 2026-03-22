@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { formatNumber, formatCost } from "@/lib/chartUtils";
 
 const levels = [
@@ -43,30 +43,28 @@ interface NEPAPyramidProps {
 export function NEPAPyramid({ activeStep }: NEPAPyramidProps) {
   return (
     <div className="w-full max-w-lg mx-auto">
-      <div className="flex flex-col items-center gap-3">
+      <div className="flex flex-col items-center gap-4">
         {levels.map((level, i) => {
-          const isActive = activeStep >= i;
           const isHighlighted = activeStep === i;
+          const isPast = activeStep > i;
           return (
-            <motion.div
+            <div
               key={level.type}
-              initial={{ opacity: 0, scaleX: 0 }}
-              animate={{
-                opacity: isActive ? 1 : 0.2,
-                scaleX: isActive ? 1 : 0.8,
+              className="w-full transition-all duration-700 ease-out"
+              style={{
+                maxWidth: `${level.width}%`,
+                opacity: isHighlighted ? 1 : isPast ? 0.5 : 0.2,
               }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="w-full"
-              style={{ maxWidth: `${level.width}%` }}
             >
               <div
-                className={`relative rounded-lg p-4 border transition-all duration-300 ${
-                  isHighlighted ? "ring-2 ring-offset-2 ring-offset-[var(--background)]" : ""
+                className={`relative rounded-lg p-4 border transition-all duration-500 ${
+                  isHighlighted
+                    ? "ring-2 ring-offset-2 ring-offset-[var(--background)] ring-[var(--accent)]"
+                    : ""
                 }`}
                 style={{
                   backgroundColor: `${level.color}15`,
-                  borderColor: `${level.color}40`,
-                  // ring color set via Tailwind class
+                  borderColor: isHighlighted ? level.color : `${level.color}30`,
                 }}
               >
                 <div className="flex items-center justify-between mb-1">
@@ -84,44 +82,61 @@ export function NEPAPyramid({ activeStep }: NEPAPyramidProps) {
                   {level.fullName}
                 </div>
 
-                {isHighlighted && (
-                  <motion.div
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: "auto" }}
-                    className="mt-3 pt-3 border-t border-[var(--card-border)] grid grid-cols-3 gap-2"
-                  >
-                    <div>
-                      <div className="text-xs text-[var(--muted)]">Volume/yr</div>
-                      <div className="text-sm font-semibold">
-                        ~{formatNumber(level.volume)}
+                <AnimatePresence>
+                  {isHighlighted && (
+                    <motion.div
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: "auto" }}
+                      exit={{ opacity: 0, height: 0 }}
+                      transition={{ duration: 0.4, ease: "easeOut" }}
+                      className="overflow-hidden"
+                    >
+                      <div className="mt-3 pt-3 border-t border-[var(--card-border)] grid grid-cols-3 gap-2">
+                        <div>
+                          <div className="text-xs text-[var(--muted)]">
+                            Volume/yr
+                          </div>
+                          <div className="text-sm font-semibold">
+                            ~{formatNumber(level.volume)}
+                          </div>
+                        </div>
+                        <div>
+                          <div className="text-xs text-[var(--muted)]">
+                            Avg Cost
+                          </div>
+                          <div className="text-sm font-semibold">
+                            {formatCost(level.cost)}
+                          </div>
+                        </div>
+                        <div>
+                          <div className="text-xs text-[var(--muted)]">
+                            Timeline
+                          </div>
+                          <div className="text-sm font-semibold">
+                            {level.time}
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                    <div>
-                      <div className="text-xs text-[var(--muted)]">Avg Cost</div>
-                      <div className="text-sm font-semibold">
-                        {formatCost(level.cost)}
-                      </div>
-                    </div>
-                    <div>
-                      <div className="text-xs text-[var(--muted)]">Timeline</div>
-                      <div className="text-sm font-semibold">{level.time}</div>
-                    </div>
-                  </motion.div>
-                )}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </div>
-            </motion.div>
+            </div>
           );
         })}
       </div>
 
       {activeStep >= 3 && (
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
           className="mt-6 text-center text-sm text-[var(--muted)]"
         >
           Total estimated annual NEPA cost:{" "}
-          <span className="text-[var(--accent)] font-semibold">$1-5 billion</span>
+          <span className="text-[var(--accent)] font-semibold">
+            $1-5 billion
+          </span>
         </motion.div>
       )}
     </div>

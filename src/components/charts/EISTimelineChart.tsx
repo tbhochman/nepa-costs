@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import * as d3 from "d3";
 import { CHART_COLORS } from "@/lib/chartUtils";
 
@@ -13,6 +13,7 @@ interface EISTimelineChartProps {
 export function EISTimelineChart({ activeStep }: EISTimelineChartProps) {
   const svgRef = useRef<SVGSVGElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
+  const [hasDrawn, setHasDrawn] = useState(false);
 
   useEffect(() => {
     if (!svgRef.current || !containerRef.current) return;
@@ -103,15 +104,17 @@ export function EISTimelineChart({ activeStep }: EISTimelineChartProps) {
       .attr("stroke-width", 2.5)
       .attr("d", line);
 
-    // Animate line drawing
+    // Animate line drawing (only on first render)
     const pathLength = path.node()!.getTotalLength();
-    path
-      .attr("stroke-dasharray", pathLength)
-      .attr("stroke-dashoffset", pathLength)
-      .transition()
-      .duration(1500)
-      .ease(d3.easeQuadOut)
-      .attr("stroke-dashoffset", 0);
+    if (!hasDrawn) {
+      path
+        .attr("stroke-dasharray", pathLength)
+        .attr("stroke-dashoffset", pathLength)
+        .transition()
+        .duration(1500)
+        .ease(d3.easeQuadOut)
+        .attr("stroke-dashoffset", 0);
+    }
 
     // Dots
     g.selectAll("circle")
@@ -119,12 +122,14 @@ export function EISTimelineChart({ activeStep }: EISTimelineChartProps) {
       .join("circle")
       .attr("cx", (d) => x(d.year))
       .attr("cy", (d) => y(d.medianYears))
-      .attr("r", 0)
+      .attr("r", hasDrawn ? 4 : 0)
       .attr("fill", CHART_COLORS.accent)
       .transition()
-      .duration(400)
-      .delay((_, i) => i * 80 + 500)
+      .duration(hasDrawn ? 0 : 400)
+      .delay((_, i) => hasDrawn ? 0 : i * 80 + 500)
       .attr("r", 4);
+
+    if (!hasDrawn) setHasDrawn(true);
 
     // Highlight annotations based on step
     if (activeStep >= 1) {

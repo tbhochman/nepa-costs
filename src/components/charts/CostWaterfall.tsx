@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import * as d3 from "d3";
 import { CHART_COLORS, formatCost } from "@/lib/chartUtils";
 
@@ -26,6 +26,8 @@ interface CostWaterfallProps {
 export function CostWaterfall({ activeStep }: CostWaterfallProps) {
   const svgRef = useRef<SVGSVGElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
+  const [hasAnimated, setHasAnimated] = useState(false);
+  const prevStep = useRef(activeStep);
 
   useEffect(() => {
     if (!svgRef.current || !containerRef.current) return;

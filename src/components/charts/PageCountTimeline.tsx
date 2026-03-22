@@ -1,8 +1,9 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import * as d3 from "d3";
 import { CHART_COLORS } from "@/lib/chartUtils";
+import { useInView } from "react-intersection-observer";
 
 const data = [
   { era: "1970s", pages: 30, label: "Early NEPA" },
@@ -21,6 +22,13 @@ interface PageCountTimelineProps {
 export function PageCountTimeline({ activeStep }: PageCountTimelineProps) {
   const svgRef = useRef<SVGSVGElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
+  const [hasAnimated, setHasAnimated] = useState(false);
+  const { ref: inViewRef, inView } = useInView({ threshold: 0.3, triggerOnce: true });
+
+  // Mark as animated once in view
+  useEffect(() => {
+    if (inView && !hasAnimated) setHasAnimated(true);
+  }, [inView, hasAnimated]);
 
   useEffect(() => {
     if (!svgRef.current || !containerRef.current) return;
@@ -42,8 +50,6 @@ export function PageCountTimeline({ activeStep }: PageCountTimelineProps) {
     const g = svg
       .append("g")
       .attr("transform", `translate(${margin.left},${margin.top})`);
-
-    const visibleData = data.slice(0, Math.min(activeStep + 2, data.length));
 
     const x = d3
       .scaleBand()
@@ -67,7 +73,7 @@ export function PageCountTimeline({ activeStep }: PageCountTimelineProps) {
       .attr("y1", (d) => y(d))
       .attr("y2", (d) => y(d));
 
-    // CEQ recommended max line
+    // CEQ recommended max line (always show once step >= 1)
     if (activeStep >= 1) {
       g.append("line")
         .attr("x1", 0)
@@ -79,7 +85,7 @@ export function PageCountTimeline({ activeStep }: PageCountTimelineProps) {
         .attr("stroke-width", 1.5)
         .attr("opacity", 0)
         .transition()
-        .duration(500)
+        .duration(600)
         .attr("opacity", 1);
 
       g.append("text")
@@ -88,30 +94,36 @@ export function PageCountTimeline({ activeStep }: PageCountTimelineProps) {
         .attr("text-anchor", "end")
         .attr("fill", CHART_COLORS.danger)
         .attr("font-size", 11)
-        .text("CEQ recommended max: 150 pages");
+        .text("FRA page limit: 150 pages")
+        .attr("opacity", 0)
+        .transition()
+        .duration(600)
+        .attr("opacity", 1);
     }
 
-    // Bars
+    // ALL bars appear together
+    const animDuration = hasAnimated ? 0 : 800;
+
     g.selectAll("rect")
-      .data(visibleData)
+      .data(data)
       .join("rect")
       .attr("x", (d) => x(d.era)!)
       .attr("width", x.bandwidth())
-      .attr("y", innerH)
-      .attr("height", 0)
+      .attr("y", hasAnimated ? (d) => y(d.pages) : innerH)
+      .attr("height", hasAnimated ? (d) => innerH - y(d.pages) : 0)
       .attr("fill", (d) =>
         d.pages > CEQ_MAX ? CHART_COLORS.accent : CHART_COLORS.blue
       )
       .attr("rx", 4)
       .transition()
-      .duration(600)
-      .delay((_, i) => i * 100)
+      .duration(animDuration)
+      .ease(d3.easeCubicOut)
       .attr("y", (d) => y(d.pages))
       .attr("height", (d) => innerH - y(d.pages));
 
     // Labels on bars
     g.selectAll(".bar-label")
-      .data(visibleData)
+      .data(data)
       .join("text")
       .attr("class", "bar-label")
       .attr("x", (d) => x(d.era)! + x.bandwidth() / 2)
@@ -124,7 +136,7 @@ export function PageCountTimeline({ activeStep }: PageCountTimelineProps) {
       .text((d) => d.pages.toLocaleString())
       .transition()
       .duration(400)
-      .delay((_, i) => i * 100 + 400)
+      .delay(hasAnimated ? 0 : 600)
       .attr("opacity", 1);
 
     // Axes
@@ -146,8 +158,8 @@ export function PageCountTimeline({ activeStep }: PageCountTimelineProps) {
       .select(".domain")
       .remove();
 
-    // Stacked breakdown for last bar
-    if (activeStep >= 2 && visibleData.length === data.length) {
+    // Stacked breakdown for last bar (step 2+)
+    if (activeStep >= 2) {
       const lastBar = data[data.length - 1];
       const barX = x(lastBar.era)!;
       const mainBody = 661;
@@ -163,11 +175,10 @@ export function PageCountTimeline({ activeStep }: PageCountTimelineProps) {
         .attr("stroke-dasharray", "3,3")
         .attr("opacity", 0)
         .transition()
-        .delay(800)
+        .delay(200)
         .duration(400)
         .attr("opacity", 0.6);
 
-      // Annotation
       const annotX = barX + x.bandwidth() + 8;
       g.append("text")
         .attr("x", annotX)
@@ -177,7 +188,7 @@ export function PageCountTimeline({ activeStep }: PageCountTimelineProps) {
         .attr("opacity", 0)
         .text("← appendices: 1,042 pg")
         .transition()
-        .delay(900)
+        .delay(300)
         .duration(400)
         .attr("opacity", 1);
 
@@ -189,14 +200,14 @@ export function PageCountTimeline({ activeStep }: PageCountTimelineProps) {
         .attr("opacity", 0)
         .text("← main body: 661 pg")
         .transition()
-        .delay(1000)
+        .delay(400)
         .duration(400)
         .attr("opacity", 1);
     }
-  }, [activeStep]);
+  }, [activeStep, hasAnimated]);
 
   return (
-    <div ref={containerRef} className="w-full">
+    <div ref={(el) => { containerRef.current = el; inViewRef(el); }} className="w-full">
       <svg ref={svgRef} />
     </div>
   );
