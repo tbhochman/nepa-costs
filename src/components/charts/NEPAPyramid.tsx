@@ -12,7 +12,7 @@ const levels = [
     time: "4.5 years",
     share: "~0.5%",
     color: "#f59e0b",
-    width: 30,
+    width: 55,
   },
   {
     type: "EA",
@@ -22,7 +22,7 @@ const levels = [
     time: "1-2 years",
     share: "~4.5%",
     color: "#3b82f6",
-    width: 60,
+    width: 78,
   },
   {
     type: "CE",
