@@ -1,0 +1,134 @@
+{
+  "sources": [
+    {
+      "id": "ceq-timelines",
+      "name": "CEQ EIS Timeline Report",
+      "org": "Council on Environmental Quality",
+      "year": 2025,
+      "url": "https://ceq.doe.gov/nepa-practice/eis-timelines.html",
+      "quality": "high",
+      "qualityNote": "Official government dataset, 1,903 EISs",
+      "limitation": "EIS only — does not cover EAs or CEs, which represent 99%+ of NEPA actions"
+    },
+    {
+      "id": "ceq-length",
+      "name": "CEQ EIS Length Report",
+      "org": "Council on Environmental Quality",
+      "year": 2020,
+      "url": "https://ceq.doe.gov/nepa-practice/eis-length.html",
+      "quality": "high",
+      "qualityNote": "Official government dataset, 656 EISs",
+      "limitation": "EIS only, 2013-2018 time period"
+    },
+    {
+      "id": "rff-timelines",
+      "name": "How Long Does It Take?",
+      "org": "Resources for the Future",
+      "year": 2025,
+      "url": "https://www.rff.org/publications/reports/how-long-does-it-take-national-environmental-policy-act-timelines-and-outcomes-for-clean-energy-projects/",
+      "quality": "high",
+      "qualityNote": "Peer-reviewed, project-level data from primary sources",
+      "limitation": "Small sample sizes, clean energy only"
+    },
+    {
+      "id": "rff-litigation",
+      "name": "Taking Green Energy Projects to Court",
+      "org": "Resources for the Future",
+      "year": 2025,
+      "url": "https://www.rff.org/publications/reports/taking-green-energy-projects-to-court-nepa-review-and-court-challenges-to-renewable-energy/",
+      "quality": "high",
+      "qualityNote": "Comprehensive case-level analysis",
+      "limitation": "Clean energy projects only"
+    },
+    {
+      "id": "breakthrough",
+      "name": "Understanding NEPA Litigation",
+      "org": "Breakthrough Institute",
+      "year": 2024,
+      "url": "https://thebreakthrough.org/issues/energy/understanding-nepa-litigation",
+      "quality": "high",
+      "qualityNote": "1,800+ cases with Holland & Knight partnership, systematic coding",
+      "limitation": "Litigation lens only — not representative of all NEPA reviews"
+    },
+    {
+      "id": "ifp",
+      "name": "Multiple NEPA Reports",
+      "org": "Institute for Progress",
+      "year": 2024,
+      "url": "https://ifp.org/environmental-review/",
+      "quality": "high",
+      "qualityNote": "Transparent methodology, draws from CEQ/DOE data",
+      "limitation": "Some cost figures are estimates"
+    },
+    {
+      "id": "bennon-wilson",
+      "name": "NEPA Litigation Over Large Energy and Transport Infrastructure Projects",
+      "org": "Stanford CDDRL (Bennon & Wilson)",
+      "year": 2023,
+      "url": "https://cddrl.fsi.stanford.edu/publication/nepa-litigation-over-large-energy-and-transport-infrastructure-projects",
+      "quality": "high",
+      "qualityNote": "355 major projects with systematic coding",
+      "limitation": "2010-2018 only"
+    },
+    {
+      "id": "liscow-brooks",
+      "name": "The Cost of Highway Construction",
+      "org": "Yale Law / Brookings (Liscow & Brooks)",
+      "year": 2023,
+      "url": "https://law.yale.edu/yls-today/news/zachary-liscow-and-leah-brooks-cost-highway-construction",
+      "quality": "high",
+      "qualityNote": "Rigorous academic analysis",
+      "limitation": "Shows correlation (post-NEPA cost increase), not proven causation"
+    },
+    {
+      "id": "niskanen-catf",
+      "name": "Beyond NEPA: Understanding Complexities of Slow Transmission Buildout",
+      "org": "Niskanen Center / CATF",
+      "year": 2024,
+      "url": "https://www.niskanencenter.org/beyond-nepa-understanding-the-complexities-of-slow-transmission-buildout/",
+      "quality": "good",
+      "qualityNote": "Important counterpoint — 40+ papers reviewed, argues NEPA itself is not primary delay driver",
+      "limitation": "Small sample (37 projects), transmission sector only"
+    },
+    {
+      "id": "nam-fai",
+      "name": "$8 Billion a Year: The Cost of America's Broken Permitting System",
+      "org": "National Association of Manufacturers / Families for Affordable Infrastructure",
+      "year": 2026,
+      "url": "https://nam.org/8-billion-a-year-the-cost-of-americas-broken-permitting-system-to-manufacturers-36024/",
+      "quality": "moderate",
+      "qualityNote": "Industry survey with large sample",
+      "limitation": "Covers ALL federal permitting, not NEPA-specific. Industry-funded advocacy perspective"
+    },
+    {
+      "id": "gao",
+      "name": "GAO-14-369: Little Information Exists on NEPA Analyses",
+      "org": "Government Accountability Office",
+      "year": 2014,
+      "url": "https://www.gao.gov/products/gao-14-369",
+      "quality": "high",
+      "qualityNote": "Authoritative government audit",
+      "limitation": "2014 — somewhat dated"
+    },
+    {
+      "id": "cgo",
+      "name": "NEPA Timelines for Clean Energy Projects",
+      "org": "Center for Growth and Opportunity",
+      "year": 2024,
+      "url": "https://www.thecgo.org/research/nepa-timelines-for-clean-energy-projects-understanding-delays-in-clean-energy-development/",
+      "quality": "good",
+      "qualityNote": "89 clean energy projects with public Google Sheets database",
+      "limitation": "Smaller sample"
+    },
+    {
+      "id": "construction-physics",
+      "name": "How NEPA Works",
+      "org": "Construction Physics (Brian Potter)",
+      "year": 2024,
+      "url": "https://www.construction-physics.com/p/how-nepa-works",
+      "quality": "good",
+      "qualityNote": "Best synthesis of cost escalation narrative",
+      "limitation": "Secondary analysis"
+    }
+  ]
+}

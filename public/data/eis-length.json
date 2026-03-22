@@ -1,0 +1,17 @@
+{
+  "source": "CEQ EIS Length Report, June 2020",
+  "coverage": "656 EISs evaluated, 2013-2018",
+  "url": "https://ceq.doe.gov/nepa-practice/eis-length.html",
+  "ceqRecommendedMax": 150,
+  "averageMainBody": 661,
+  "averageAppendices": 1042,
+  "averageTotal": 1703,
+  "historicalGrowth": [
+    { "era": "1970s", "avgPages": 30, "label": "Early NEPA era" },
+    { "era": "1980s", "avgPages": 150, "label": "Growth period" },
+    { "era": "1990s", "avgPages": 350, "label": "Expansion" },
+    { "era": "2000s", "avgPages": 600, "label": "Pre-reform" },
+    { "era": "2013-2018", "avgPages": 1703, "label": "Recent average" }
+  ],
+  "note": "90% of EIS content is estimated as litigation prevention (IFP)"
+}

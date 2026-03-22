@@ -1,0 +1,40 @@
+{
+  "sources": [
+    "DOE records via IFP/Construction Physics",
+    "GAO-14-369 (2014)",
+    "CEQ reports",
+    "NAM/FAI Permitting Survey (2026)"
+  ],
+  "reviewCostsByType": [
+    { "type": "Categorical Exclusion (CE)", "abbrev": "CE", "estimatedCost": 50000, "medianTime": "105 days", "medianTimeDays": 105, "volumePerYear": 45000, "shareOfReviews": 95 },
+    { "type": "Environmental Assessment (EA)", "abbrev": "EA", "estimatedCost": 200000, "medianTime": "1-2 years", "medianTimeDays": 547, "volumePerYear": 10000, "shareOfReviews": 4.5 },
+    { "type": "Environmental Impact Statement (EIS)", "abbrev": "EIS", "estimatedCost": 6000000, "medianTime": "4.5 years", "medianTimeDays": 1643, "volumePerYear": 100, "shareOfReviews": 0.5 }
+  ],
+  "eisCostHistory": [
+    { "year": 2003, "avgCost": 250000, "source": "DOE median contractor cost" },
+    { "year": 2006, "avgCost": 800000, "source": "DOE estimate" },
+    { "year": 2009, "avgCost": 2000000, "source": "DOE estimate" },
+    { "year": 2012, "avgCost": 3500000, "source": "DOE estimate" },
+    { "year": 2016, "avgCost": 7500000, "source": "DOE average" }
+  ],
+  "annualGovernmentWideCost": {
+    "lowEstimate": 1000000000,
+    "highEstimate": 5000000000,
+    "basis": "225 EISs x ~$5M avg + ~10,000 EAs x ~$200K + CE costs",
+    "source": "IFP / Construction Physics synthesis"
+  },
+  "namFaiPermittingBurden": {
+    "annualCost": 7900000000,
+    "note": "Covers ALL federal permitting (CWA, CAA, NEPA combined), not NEPA-specific",
+    "investmentDeterrence": 50.8,
+    "wouldIncreaseInvestment": 65.6,
+    "internationalComparison": "U.S. takes 80% longer than peer nations",
+    "source": "NAM/FAI Survey, Dec 2025-Jan 2026"
+  },
+  "highwayCostImpact": {
+    "finding": "Interstate highway spending per mile tripled from 1960s to 1980s",
+    "incomeCorrelation": "Correlation between local income and project cost became significant only after 1970 (post-NEPA)",
+    "source": "Liscow & Brooks, Yale/Brookings",
+    "caveat": "Correlation, not proven causation"
+  }
+}

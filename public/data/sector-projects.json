@@ -1,0 +1,169 @@
+{
+  "sources": [
+    "RFF: How Long Does It Take? (2025)",
+    "Niskanen/CATF (2024)",
+    "Bennon & Wilson, Stanford (2023)",
+    "CEQ reports",
+    "IFP analyses",
+    "FHWA data"
+  ],
+  "sectors": [
+    {
+      "id": "solar",
+      "name": "Solar",
+      "icon": "sun",
+      "tier": "primary",
+      "metrics": {
+        "eisProjects": 32,
+        "eaProjects": 19,
+        "avgEISMonths": 27,
+        "meetsTwoYearTarget": 67,
+        "avgEAMonths": 23,
+        "eaMeetsOneYear": 68,
+        "cancellationRate": 32,
+        "litigationRateEIS": 37.5,
+        "litigationRateEA": 10.5,
+        "capacityAdded": "9,000 MW",
+        "capacityShare": 10,
+        "capacityNote": "Only 10% of total U.S. solar increase 2010-2023"
+      },
+      "keyFinding": "Fastest EIS completion of any energy sector (27 months), but 32% cancellation rate and only 10% of solar capacity goes through NEPA",
+      "source": "RFF 2025, Bennon & Wilson 2023"
+    },
+    {
+      "id": "wind",
+      "name": "Wind",
+      "icon": "wind",
+      "tier": "primary",
+      "metrics": {
+        "eisProjects": 16,
+        "eaProjects": 9,
+        "avgEISMonths": 45,
+        "meetsTwoYearTarget": 50,
+        "avgEAMonths": null,
+        "cancellationRate": 31,
+        "litigationRateEIS": 50,
+        "litigationRateEA": 11,
+        "capacityAdded": "4,000 MW",
+        "capacityShare": 3.7,
+        "capacityNote": "Only 3.7% of total U.S. wind increase 2010-2023"
+      },
+      "offshoreWind": {
+        "operational": 42,
+        "underConstruction": 932,
+        "stuckInPermitting": 18581,
+        "unit": "MW"
+      },
+      "keyFinding": "50% litigation rate for EIS projects \u2014 highest of any clean energy sector. 50% meet 2-year target vs. 67% for solar",
+      "source": "RFF 2025, Bennon & Wilson 2023"
+    },
+    {
+      "id": "transmission",
+      "name": "Transmission",
+      "icon": "zap",
+      "tier": "primary",
+      "metrics": {
+        "projectsAnalyzed": 37,
+        "avgTimelineYears": 10,
+        "timeWaitingForApproval": 80,
+        "cancellationRate": 12,
+        "litigationRate": 31
+      },
+      "keyFinding": "Average 10-year timeline, with ~80% of time spent waiting for approval. Lowest cancellation rate (12%) suggests projects that survive are resilient",
+      "source": "Niskanen/CATF 2024, Bennon & Wilson 2023"
+    },
+    {
+      "id": "geothermal",
+      "name": "Geothermal",
+      "icon": "flame",
+      "tier": "primary",
+      "metrics": {
+        "eisProjects": 3,
+        "eaProjects": 13,
+        "avgEAMonths": 14,
+        "eaMeetsOneYear": 92,
+        "multipleReviews": 6,
+        "multipleReviewsNote": "A single geothermal project can require up to 6 separate NEPA reviews"
+      },
+      "keyFinding": "EAs perform well (92% meet 1-year target), but single projects face up to 6 sequential NEPA reviews for different phases",
+      "source": "RFF 2025, IFP"
+    },
+    {
+      "id": "highways",
+      "name": "Highways & Transportation",
+      "icon": "road",
+      "tier": "primary",
+      "metrics": {
+        "shareOfEIS": 14,
+        "avgEISYears": 6.2,
+        "costPerMileChange": "3x increase from 1960s to 1980s",
+        "transitCostComparison": "3x more expensive than international peers"
+      },
+      "keyFinding": "FHWA EISs take 6.2 years on average \u2014 longest of any major agency. Highway costs per mile tripled post-NEPA. 33 states have rejected federal highway funding to bypass NEPA",
+      "source": "CEQ 2025, Liscow/Brooks",
+      "caveat": "Cost increase is correlation, not proven causation"
+    },
+    {
+      "id": "forestry",
+      "name": "Public Lands & Forestry",
+      "icon": "trees",
+      "tier": "primary",
+      "metrics": {
+        "shareOfLitigation": 37,
+        "forestMgmtLitigationSubshare": 47,
+        "paperworkYears": "3.6-4.7",
+        "shareOfEIS": 18,
+        "avgEISYears": 5.1
+      },
+      "keyFinding": "37% of ALL NEPA litigation targets public lands projects. Forest Service produces the most EISs (18% of total) and takes 5.1 years on average",
+      "source": "Breakthrough Institute 2024, CEQ 2025"
+    },
+    {
+      "id": "pipelines",
+      "name": "Pipelines",
+      "icon": "pipeline",
+      "tier": "secondary",
+      "metrics": {
+        "cancellationRate": 22,
+        "litigationRate": 50
+      },
+      "keyFinding": "50% litigation rate but only 22% cancellation \u2014 pipeline projects tend to survive legal challenges",
+      "source": "Bennon & Wilson 2023"
+    },
+    {
+      "id": "mining",
+      "name": "Mining & Minerals",
+      "icon": "pickaxe",
+      "tier": "secondary",
+      "metrics": {
+        "shareOfLitigation": 9,
+        "agencyWinRate": 76
+      },
+      "keyFinding": "9% of NEPA litigation with a 76% agency win rate \u2014 lower than other sectors, suggesting mining reviews face tougher legal scrutiny",
+      "source": "Breakthrough Institute 2024"
+    },
+    {
+      "id": "water",
+      "name": "Water Infrastructure",
+      "icon": "droplets",
+      "tier": "secondary",
+      "metrics": {
+        "shareOfEIS": 12,
+        "avgEISYears": 4.1,
+        "shareOfLitigation": 10,
+        "agencyWinRate": 85
+      },
+      "keyFinding": "Army Corps handles 12% of EISs. 85% agency win rate in litigation \u2014 highest of any sector",
+      "source": "CEQ 2025, Breakthrough Institute 2024"
+    }
+  ],
+  "cleanEnergyParadox": {
+    "cleanEnergyShareOfEIS": 62,
+    "fossilFuelShareOfEIS": 16,
+    "blmBreakdown": {
+      "fossilFuel": { "eis": 5, "ea": 211, "ce": 76 },
+      "cleanEnergy": { "eis": 19, "ea": 9, "ce": 0 }
+    },
+    "source": "IFP, DOE"
+  }
+}

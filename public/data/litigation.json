@@ -1,0 +1,64 @@
+{
+  "sources": [
+    "Breakthrough Institute / Chiappa et al. (July 2024) — 387 appellate + 1,400+ district court cases, 2013-2022",
+    "RFF: Taking Green Energy Projects to Court (2025)",
+    "Bennon & Wilson, Stanford (2023) — 355 major projects"
+  ],
+  "breakthrough": {
+    "totalAppellateCases": 387,
+    "totalDistrictCases": 1400,
+    "timePeriod": "2013-2022",
+    "appealsPerYear": 39,
+    "appealsPerYearChange": "+56% vs 2001-2015",
+    "agencyWinRate": 80,
+    "ngoInitiated": 72,
+    "top10OrgsShare": 35,
+    "avgYearsToResolution": 4.2,
+    "resolvedWithin6Years": 84,
+    "resolvedUnder3Years": 39,
+    "environmentalJusticeShare": 2.8,
+    "bySector": [
+      { "sector": "Public Lands/Forestry", "share": 37, "forestMgmtSubshare": 47, "agencyWinRate": 78 },
+      { "sector": "Energy", "share": 29, "avgDelayYears": 3.9, "agencyWinRate": 71 },
+      { "sector": "Transportation", "share": 15, "agencyWinRate": 83 },
+      { "sector": "Water/Coastal", "share": 10, "agencyWinRate": 85 },
+      { "sector": "Mining/Minerals", "share": 9, "agencyWinRate": 76 }
+    ]
+  },
+  "rffCleanEnergy": {
+    "solarEIS": { "total": 32, "litigated": 12, "litigationRate": 37.5 },
+    "solarEA": { "total": 19, "litigated": 2, "litigationRate": 10.5 },
+    "windEIS": { "total": 16, "litigated": 8, "litigationRate": 50 },
+    "windEA": { "total": 9, "litigated": 1, "litigationRate": 11 },
+    "geothermalEIS": { "total": 3, "litigated": 1, "litigationRate": 33 },
+    "geothermalEA": { "total": 13, "litigated": 0, "litigationRate": 0 },
+    "filingSpeed": { "within60Days": 10, "within120Days": 22, "totalFederalCases": 27 },
+    "resolutionTimeline": { "districtCourt": "~1 year", "appellateAdds": "2+ years" },
+    "projectTerminated": 3,
+    "projectsDelayed": 6,
+    "litigatedVsNonOperationTime": { "litigated": 41.2, "nonLitigated": 40.9, "unit": "months" },
+    "plaintiffProfile": "Regional/local environmental groups and Tribal representatives filed majority",
+    "blmFastTrack": { "totalProjects": 34, "courtChallenged": 13, "noNEPAChallengesAfter": "January 2014" }
+  },
+  "bennonWilson": {
+    "totalProjects": 355,
+    "timePeriod": "2010-2018",
+    "completedByDate": { "year": 2022, "rate": 50, "qualifier": "less than" },
+    "cancelledOverall": 14,
+    "stillInProgress": 40,
+    "predevelopmentLitigation": 28,
+    "nepaClaimsInLitigation": 89,
+    "bySector": [
+      { "sector": "Solar", "litigationRate": 67, "cancellationRate": 32 },
+      { "sector": "Pipelines", "litigationRate": 50, "cancellationRate": 22 },
+      { "sector": "Wind", "litigationRate": 38, "cancellationRate": 31 },
+      { "sector": "Transmission", "litigationRate": 31, "cancellationRate": 12 }
+    ]
+  },
+  "overallLitigationRate": {
+    "value": 0.22,
+    "unit": "percent",
+    "basis": "1 in ~500 NEPA decisions",
+    "source": "Niskanen/CATF analysis"
+  }
+}

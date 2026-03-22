@@ -1,0 +1,37 @@
+{
+  "source": "CEQ EIS Timeline Report, January 2025",
+  "coverage": "1,903 EISs with final EIS published between Jan 1, 2010 and Dec 31, 2024",
+  "url": "https://ceq.doe.gov/nepa-practice/eis-timelines.html",
+  "medianByYear": [
+    { "year": 2010, "medianYears": 3.4, "count": 136 },
+    { "year": 2011, "medianYears": 3.6, "count": 130 },
+    { "year": 2012, "medianYears": 3.4, "count": 144 },
+    { "year": 2013, "medianYears": 3.3, "count": 119 },
+    { "year": 2014, "medianYears": 3.6, "count": 127 },
+    { "year": 2015, "medianYears": 4.0, "count": 126 },
+    { "year": 2016, "medianYears": 4.6, "count": 112 },
+    { "year": 2017, "medianYears": 4.7, "count": 107 },
+    { "year": 2018, "medianYears": 4.5, "count": 98 },
+    { "year": 2019, "medianYears": 3.6, "count": 96 },
+    { "year": 2020, "medianYears": 3.3, "count": 136 },
+    { "year": 2021, "medianYears": 2.8, "count": 101 },
+    { "year": 2022, "medianYears": 2.5, "count": 83 },
+    { "year": 2023, "medianYears": 2.4, "count": 90 },
+    { "year": 2024, "medianYears": 2.2, "count": 98 }
+  ],
+  "complianceRate": {
+    "2019": { "under2Years": 24, "over2Years": 76 },
+    "2024": { "under2Years": 41, "over2Years": 59 }
+  },
+  "fraDeadline": 2,
+  "fraComplianceRate2024": 39,
+  "topAgencies": [
+    { "agency": "Forest Service", "abbrev": "USFS", "shareOfEIS": 18, "avgYears": 5.1 },
+    { "agency": "Bureau of Land Management", "abbrev": "BLM", "shareOfEIS": 16, "avgYears": 3.8 },
+    { "agency": "Federal Highway Administration", "abbrev": "FHWA", "shareOfEIS": 14, "avgYears": 6.2 },
+    { "agency": "Army Corps of Engineers", "abbrev": "USACE", "shareOfEIS": 12, "avgYears": 4.1 },
+    { "agency": "Department of Energy", "abbrev": "DOE", "shareOfEIS": 5, "avgYears": 3.5 },
+    { "agency": "Bureau of Reclamation", "abbrev": "BOR", "shareOfEIS": 4, "avgYears": 4.0 },
+    { "agency": "National Park Service", "abbrev": "NPS", "shareOfEIS": 3, "avgYears": 3.9 }
+  ]
+}
