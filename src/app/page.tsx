@@ -23,7 +23,11 @@ export default function Home() {
         id="pyramid"
         title="The Scale of NEPA"
         subtitle="Three tiers of review, vastly different in scope, cost, and consequence."
-        source="CEQ, IFP, DOE"
+        sources={[
+          { label: "CEQ", url: "https://ceq.doe.gov/nepa-practice/eis-length.html" },
+          { label: "IFP", url: "https://ifp.org/no-nepa-really-is-a-problem-for-clean-energy/" },
+          { label: "DOE", url: "https://www.energy.gov/nepa/nepa-documents" },
+        ]}
         steps={[
           {
             content: (
@@ -33,7 +37,7 @@ export default function Home() {
                 </p>
                 <p>
                   The most rigorous review. Only ~100 are completed per year, but
-                  each averages <strong>4.5 years</strong> and costs around{" "}
+                  each averages <strong>4.5 years</strong>{" "}and costs around{" "}
                   <strong>$6 million</strong>. Complex EIS can cost tens of
                   millions.
                 </p>
@@ -75,7 +79,7 @@ export default function Home() {
                 <p className="font-semibold mb-2">The Total Cost</p>
                 <p>
                   Across all three tiers, federal agencies spend an estimated{" "}
-                  <strong>$1-5 billion annually</strong> on NEPA compliance —
+                  <strong>$1-5 billion annually</strong>{" "}on NEPA compliance —
                   though the GAO has noted that agencies do not systematically
                   track these costs.{" "}
                   <a href="https://ifp.org/environmental-review/" target="_blank" rel="noopener noreferrer" className="text-[var(--accent)] hover:underline text-xs">[IFP]</a>{" "}
@@ -94,8 +98,9 @@ export default function Home() {
           id="paperwork"
           title="The Growing Paperwork"
           subtitle="EIS documents have grown from a few dozen pages to over 1,700."
-          source="CEQ EIS Length Report, 2020"
-          sourceUrl="https://ceq.doe.gov/nepa-practice/eis-length.html"
+          sources={[
+            { label: "CEQ EIS Length Report, 2020", url: "https://ceq.doe.gov/nepa-practice/eis-length.html" },
+          ]}
           reverse
           steps={[
             {
@@ -111,7 +116,7 @@ export default function Home() {
               content: (
                 <p>
                   By 2013-2018, the average EIS had grown to{" "}
-                  <strong>661 pages</strong> of main body text — over{" "}
+                  <strong>661 pages</strong>{" "}of main body text — over{" "}
                   <strong>4x the statutory limit</strong>. The FRA page limit
                   is shown in red.
                 </p>
@@ -121,7 +126,7 @@ export default function Home() {
               content: (
                 <p>
                   Including appendices, the total reaches{" "}
-                  <strong>1,703 pages</strong> on average. Although the Fiscal
+                  <strong>1,703 pages</strong>{" "}on average. Although the Fiscal
                   Responsibility Act imposed page limits on the main body of
                   EIS documents, agencies use appendices — which don&apos;t
                   count toward the limit — to work around the cap. The
@@ -140,8 +145,10 @@ export default function Home() {
         id="timelines"
         title="How Long Does It Take?"
         subtitle="EIS completion times peaked in 2017, then began improving — but most still miss the deadline."
-        source="CEQ EIS Timeline Report, 2025"
-        sourceUrl="https://ceq.doe.gov/nepa-practice/eis-timelines.html"
+        sources={[
+          { label: "CEQ EIS Timeline Report, 2025", url: "https://ceq.doe.gov/nepa-practice/eis-timelines.html" },
+          { label: "RFF, 2025", url: "https://www.rff.org/publications/reports/how-long-does-it-take-national-environmental-policy-act-timelines-and-outcomes-for-clean-energy-projects/" },
+        ]}
         steps={[
           {
             content: (
@@ -165,10 +172,10 @@ export default function Home() {
             content: (
               <p>
                 The 2024 median reached <strong>2.2 years</strong>, but{" "}
-                <strong>61% of EISs</strong> still exceeded the 2-year
+                <strong>61% of EISs</strong>{" "}still exceeded the 2-year
                 statutory deadline. And these shorter timelines partly reflect
                 agencies shifting work into a{" "}
-                <strong>pre-NEPA phase</strong> that doesn&apos;t show up on
+                <strong>pre-NEPA phase</strong>{" "}that doesn&apos;t show up on
                 the clock. BLM now runs a formal pre-NEPA assessment for
                 wind and solar, where projects are reviewed and modified{" "}
                 <em>before</em> the NEPA process officially begins.{" "}
@@ -179,10 +186,10 @@ export default function Home() {
           {
             content: (
               <p>
-                RFF found that <strong>12 of 21 solar projects</strong> took
+                RFF found that <strong>12 of 21 solar projects</strong>{" "}took
                 over 2 years just from initial application to the Notice of
                 Intent that starts the formal NEPA clock. For wind,{" "}
-                <strong>9 of 14 projects</strong> took 2+ years before formal
+                <strong>9 of 14 projects</strong>{" "}took 2+ years before formal
                 review began. The formal NEPA period is sandwiched between
                 pre-application delays and post-approval steps — shortening
                 the middle doesn&apos;t necessarily shorten the total.{" "}
@@ -211,7 +218,12 @@ export default function Home() {
           id="costs"
           title="The Cost Escalation"
           subtitle="From $50,000 to $25 million — the staggering range of NEPA review costs."
-          source="DOE, GAO-14-369, IFP"
+          sources={[
+            { label: "DOE", url: "https://www.energy.gov/nepa/nepa-documents" },
+            { label: "GAO-14-369", url: "https://www.gao.gov/products/gao-14-369" },
+            { label: "IFP", url: "https://ifp.org/no-nepa-really-is-a-problem-for-clean-energy/" },
+            { label: "Construction Physics", url: "https://www.construction-physics.com/p/how-nepa-works" },
+          ]}
           reverse
           steps={[
             {
@@ -257,12 +269,16 @@ export default function Home() {
         id="clean-energy"
         title="The Clean Energy Paradox"
         subtitle="NEPA review requirements fall disproportionately on clean energy projects."
-        source="IFP, DOE, CEQ"
+        sources={[
+          { label: "IFP", url: "https://ifp.org/how-nepa-will-tax-clean-energy/" },
+          { label: "DOE", url: "https://www.energy.gov/nepa/nepa-documents" },
+          { label: "CEQ", url: "https://ceq.doe.gov/nepa-practice/eis-length.html" },
+        ]}
         steps={[
           {
             content: (
               <p>
-                <strong>62% of energy-related EIS reviews</strong> are for clean
+                <strong>62% of energy-related EIS reviews</strong>{" "}are for clean
                 energy projects — solar, wind, transmission, and geothermal. Only
                 16% are for fossil fuel projects.{" "}
                 <a href="https://ifp.org/how-nepa-will-tax-clean-energy/" target="_blank" rel="noopener noreferrer" className="text-[var(--accent)] hover:underline text-xs">[IFP]</a>
@@ -299,14 +315,17 @@ export default function Home() {
           id="litigation"
           title="Who Sues and Who Wins?"
           subtitle="NEPA litigation patterns reveal who challenges projects, how often they succeed, and how long it takes."
-          source="Breakthrough Institute, 2024; RFF, 2025"
+          sources={[
+          { label: "Breakthrough Institute, 2024", url: "https://thebreakthrough.org/issues/energy/understanding-nepa-litigation" },
+          { label: "RFF, 2025", url: "https://www.rff.org/publications/reports/taking-green-energy-projects-to-court-nepa-review-and-court-challenges-to-renewable-energy/" },
+        ]}
           reverse
           steps={[
             {
               content: (
                 <p>
                   Public lands and forestry face the most NEPA litigation (
-                  <strong>37%</strong> of all cases), followed by energy projects (
+                  <strong>37%</strong>{" "}of all cases), followed by energy projects (
                   <strong>29%</strong>). 72% of cases are filed by NGOs, with the
                   top 10 organizations responsible for 35% of all challenges.{" "}
                   <a href="https://thebreakthrough.org/issues/energy/understanding-nepa-litigation" target="_blank" rel="noopener noreferrer" className="text-[var(--accent)] hover:underline text-xs">[Breakthrough, 2024]</a>
@@ -316,9 +335,9 @@ export default function Home() {
             {
               content: (
                 <p>
-                  Agencies win <strong>~80% of the time</strong> on appeal — but
+                  Agencies win <strong>~80% of the time</strong>{" "}on appeal — but
                   winning still takes an average of{" "}
-                  <strong>4.2 years</strong> from EIS publication to resolution.
+                  <strong>4.2 years</strong>{" "}from EIS publication to resolution.
                   The process itself is the punishment.
                 </p>
               ),
@@ -328,20 +347,10 @@ export default function Home() {
                 <p>
                   For clean energy specifically, EIS litigation rates are high:{" "}
                   <strong>50% of wind EIS</strong> and{" "}
-                  <strong>37.5% of solar EIS</strong> projects face court
+                  <strong>37.5% of solar EIS</strong>{" "}projects face court
                   challenges. Yet paradoxically, litigated and non-litigated
                   projects have nearly identical timelines to operation.{" "}
                   <a href="https://www.rff.org/publications/reports/taking-green-energy-projects-to-court-nepa-review-and-court-challenges-to-renewable-energy/" target="_blank" rel="noopener noreferrer" className="text-[var(--accent)] hover:underline text-xs">[RFF, 2025]</a>
-                </p>
-              ),
-            },
-            {
-              content: (
-                <p>
-                  <strong>Important context:</strong> Only ~0.22% of all NEPA
-                  decisions face litigation. The high litigation rates apply to
-                  major EIS-level projects. The vast majority of NEPA reviews —
-                  especially CEs and EAs — proceed without legal challenge.
                 </p>
               ),
             },
@@ -355,14 +364,18 @@ export default function Home() {
         id="infrastructure"
         title="The Infrastructure Impact"
         subtitle="355 major projects, international comparisons, and the bottom line."
-        source="Bennon & Wilson (2023), Liscow & Brooks, NAM/FAI"
+        sources={[
+          { label: "Bennon & Wilson, 2023", url: "https://cddrl.fsi.stanford.edu/publication/nepa-litigation-over-large-energy-and-transport-infrastructure-projects" },
+          { label: "Liscow & Brooks", url: "https://law.yale.edu/yls-today/news/zachary-liscow-and-leah-brooks-cost-highway-construction" },
+          { label: "NAM/FAI", url: "https://nam.org/8-billion-a-year-the-cost-of-americas-broken-permitting-system-to-manufacturers-36024/" },
+        ]}
         steps={[
           {
             content: (
               <p>
-                Of <strong>355 major infrastructure projects</strong> tracked
+                Of <strong>355 major infrastructure projects</strong>{" "}tracked
                 from 2010-2018, fewer than half were completed by 2022.{" "}
-                <strong>14% were cancelled</strong> and 40% remained in progress.
+                <strong>14% were cancelled</strong>{" "}and 40% remained in progress.
                 28% faced predevelopment litigation, and 89% of those cases
                 involved NEPA claims.{" "}
                 <a href="https://cddrl.fsi.stanford.edu/publication/nepa-litigation-over-large-energy-and-transport-infrastructure-projects" target="_blank" rel="noopener noreferrer" className="text-[var(--accent)] hover:underline text-xs">[Bennon & Wilson, 2023]</a>
@@ -375,7 +388,7 @@ export default function Home() {
                 Interstate highway spending per mile{" "}
                 <strong>tripled from the 1960s to the 1980s</strong> — a pattern
                 that emerged after NEPA&apos;s passage. The U.S. takes{" "}
-                <strong>80% longer</strong> than peer nations for permitting.
+                <strong>80% longer</strong>{" "}than peer nations for permitting.
                 (Note: the highway cost increase is a correlation, not proven
                 causation.){" "}
                 <a href="https://law.yale.edu/yls-today/news/zachary-liscow-and-leah-brooks-cost-highway-construction" target="_blank" rel="noopener noreferrer" className="text-[var(--accent)] hover:underline text-xs">[Liscow & Brooks]</a>
@@ -389,17 +402,6 @@ export default function Home() {
                 (31%) projects are cancelled at roughly double the rate of
                 transmission (12%). Energy projects face shorter permits but
                 higher litigation and cancellation rates.
-              </p>
-            ),
-          },
-          {
-            content: (
-              <p>
-                The relationship between NEPA and delay is real but
-                multifactorial. 68-84% of delays are attributed to factors
-                &ldquo;outside NEPA&rdquo; — decision-maker changes, poor
-                documentation, and ESA compliance. NEPA reform alone won&apos;t
-                solve the permitting problem, but it&apos;s a necessary piece.
               </p>
             ),
           },

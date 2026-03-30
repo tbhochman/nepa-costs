@@ -19,7 +19,7 @@ export function LitigationDashboard({ activeStep }: LitigationDashboardProps) {
     if (!svgRef.current || !containerRef.current) return;
 
     const containerWidth = containerRef.current.clientWidth;
-    const margin = { top: 20, right: 20, bottom: 40, left: 50 };
+    const margin = { top: 20, right: 20, bottom: 40, left: 130 };
     const width = containerWidth;
     const height = Math.min(350, containerWidth * 0.55);
     const innerW = width - margin.left - margin.right;
