@@ -32,20 +32,22 @@ export function ScrollSection({
   });
 
   return (
-    <section id={id} className="py-24 px-4" ref={sectionRef}>
+    <section id={id} className="py-28 px-4" ref={sectionRef}>
       <div className="max-w-7xl mx-auto">
-        {/* Section header */}
+        {/* Section header with accent line */}
         <motion.div
           className="max-w-2xl mb-16"
           initial={{ opacity: 0, y: 30 }}
           animate={sectionInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7, ease: "easeOut" }}
         >
+          {/* Accent line */}
+          <div className="w-16 h-[3px] bg-[var(--accent)] mb-6 rounded-full opacity-70" />
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-3">
             {title}
           </h2>
           {subtitle && (
-            <p className="text-[var(--muted)] text-lg">{subtitle}</p>
+            <p className="text-[var(--muted)] text-lg leading-relaxed">{subtitle}</p>
           )}
         </motion.div>
 
@@ -108,17 +110,24 @@ function StepBlock({
   return (
     <div
       ref={ref}
-      className={`p-8 rounded-xl border transition-all duration-500 ease-out min-h-[250px] flex items-center ${
+      className={`relative rounded-xl transition-all duration-500 ease-out min-h-[250px] flex items-center overflow-hidden ${
         active
-          ? "border-[var(--accent)]/30 bg-[var(--accent)]/5"
-          : "border-transparent bg-transparent opacity-30"
+          ? "bg-[var(--card-bg)]/80"
+          : "bg-transparent opacity-40"
       }`}
       style={{
         transform: active ? "scale(1)" : "scale(0.97)",
         transition: "all 500ms cubic-bezier(0.4, 0, 0.2, 1)",
       }}
     >
-      <div>
+      {/* Left accent border */}
+      <div
+        className="absolute left-0 top-0 bottom-0 w-[3px] rounded-full transition-all duration-500"
+        style={{
+          background: active ? "var(--accent)" : "transparent",
+        }}
+      />
+      <div className="p-8 pl-7">
         <div className="text-xs text-[var(--accent)] font-mono mb-2">
           {String(index + 1).padStart(2, "0")}
         </div>

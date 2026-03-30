@@ -88,7 +88,7 @@ export default function Home() {
       />
 
       {/* Section B: The Growing Paperwork */}
-      <div className="bg-[var(--section-alt)]">
+      <div className="section-fade-in">
         <ScrollSection
           id="paperwork"
           title="The Growing Paperwork"
@@ -201,7 +201,7 @@ export default function Home() {
       />
 
       {/* Section D: The Cost Escalation */}
-      <div className="bg-[var(--section-alt)]">
+      <div className="section-fade-in">
         <ScrollSection
           id="costs"
           title="The Cost Escalation"
@@ -290,7 +290,7 @@ export default function Home() {
       />
 
       {/* Section F: Who Sues and Who Wins? */}
-      <div className="bg-[var(--section-alt)]">
+      <div className="section-fade-in">
         <ScrollSection
           id="litigation"
           title="Who Sues and Who Wins?"
@@ -383,39 +383,36 @@ export default function Home() {
       />
 
       {/* CTA */}
-      <section className="py-24 px-4 bg-[var(--section-alt)]">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-4">Explore by Sector</h2>
-          <p className="text-[var(--muted)] mb-8">
+      <section className="relative py-32 px-4 overflow-hidden">
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background: "radial-gradient(ellipse at center, rgba(245, 158, 11, 0.04) 0%, transparent 60%)",
+          }}
+        />
+        <div className="relative max-w-3xl mx-auto text-center">
+          <div className="w-12 h-[3px] bg-[var(--accent)] mx-auto mb-8 rounded-full opacity-70" />
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Explore by Sector</h2>
+          <p className="text-[var(--muted)] text-lg mb-10 leading-relaxed">
             Dive deeper into NEPA data for specific industry sectors — solar,
             wind, transmission, highways, forestry, and more.
           </p>
           <Link
             href="/explore"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-[var(--accent)] text-[var(--background)] font-semibold rounded-lg hover:bg-[var(--accent-light)] transition-colors"
+            className="inline-flex items-center gap-2 px-8 py-3.5 bg-[var(--accent)] text-[var(--background)] font-semibold rounded-lg hover:bg-[var(--accent-light)] transition-all hover:shadow-lg hover:shadow-[var(--accent)]/20"
           >
             Explore Sector Data
-            <svg
-              className="w-4 h-4"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={2}
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
-              />
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
             </svg>
           </Link>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="py-12 px-4 border-t border-[var(--card-border)]">
+      <footer className="py-10 px-4 border-t border-[var(--card-border)]/50">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="text-sm text-[var(--muted)]">
+          <div className="text-sm text-[var(--muted)] leading-relaxed">
             Data compiled from CEQ, RFF, Breakthrough Institute, IFP, Niskanen/CATF,
             NAM/FAI, Stanford, Yale/Brookings, GAO, and CGO.
           </div>
@@ -423,7 +420,7 @@ export default function Home() {
             href="/methodology"
             className="text-sm text-[var(--accent)] hover:underline"
           >
-            View all sources & methodology
+            View all sources &amp; methodology
           </Link>
         </div>
       </footer>

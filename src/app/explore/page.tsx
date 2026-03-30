@@ -23,6 +23,18 @@ const ICONS: Record<string, string> = {
   droplets: "\uD83D\uDCA7",
 };
 
+const SECTOR_IMAGES: Record<string, string> = {
+  solar: "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600&h=300&fit=crop&q=60",
+  wind: "https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?w=600&h=300&fit=crop&q=60",
+  transmission: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=600&h=300&fit=crop&q=60",
+  geothermal: "https://images.unsplash.com/photo-1596178065887-1198b6148b2b?w=600&h=300&fit=crop&q=60",
+  highways: "https://images.unsplash.com/photo-1515162816999-a0c47dc192f7?w=600&h=300&fit=crop&q=60",
+  forestry: "https://images.unsplash.com/photo-1448375240586-882707db888b?w=600&h=300&fit=crop&q=60",
+  pipelines: "https://images.unsplash.com/photo-1513828583688-c52646db42da?w=600&h=300&fit=crop&q=60",
+  mining: "https://images.unsplash.com/photo-1464983953574-0892a716854b?w=600&h=300&fit=crop&q=60",
+  water: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=600&h=300&fit=crop&q=60",
+};
+
 function MetricRow({ label, value }: { label: string; value: string | number | null | undefined }) {
   if (value === null || value === undefined) return null;
   return (
@@ -41,12 +53,25 @@ function SectorCard({ sector, onClick, isSelected }: { sector: Sector; onClick: 
     <motion.button
       layout
       onClick={onClick}
-      className={`text-left p-5 rounded-xl border transition-all ${
+      className={`text-left rounded-xl border transition-all overflow-hidden card-hover ${
         isSelected
           ? "border-[var(--accent)] bg-[var(--accent)]/5 ring-1 ring-[var(--accent)]/20"
           : "border-[var(--card-border)] bg-[var(--card-bg)] hover:border-[var(--muted)]"
       }`}
     >
+      {/* Sector image banner */}
+      {SECTOR_IMAGES[sector.id] && (
+        <div className="relative h-24 overflow-hidden">
+          <img
+            src={SECTOR_IMAGES[sector.id]}
+            alt={sector.name}
+            className="w-full h-full object-cover"
+            loading="lazy"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-[var(--card-bg)] to-transparent opacity-60" />
+        </div>
+      )}
+      <div className="p-5">
       <div className="flex items-center gap-3 mb-3">
         <span className="text-2xl">{ICONS[sector.icon] || ""}</span>
         <div>
@@ -116,6 +141,7 @@ function SectorCard({ sector, onClick, isSelected }: { sector: Sector; onClick: 
             <div className="text-[10px] text-[var(--muted)]">of litigation</div>
           </div>
         )}
+      </div>
       </div>
     </motion.button>
   );

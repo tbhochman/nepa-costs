@@ -64,6 +64,14 @@ export function Hero() {
         backgroundSize: "60px 60px",
       }} />
 
+      {/* Radial amber glow behind title */}
+      <div
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] rounded-full pointer-events-none"
+        style={{
+          background: "radial-gradient(ellipse, rgba(245, 158, 11, 0.06) 0%, transparent 70%)",
+        }}
+      />
+
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
@@ -74,22 +82,31 @@ export function Hero() {
           An Interactive Data Story
         </div>
 
-        <h1 className="text-5xl md:text-7xl font-bold tracking-tight leading-[1.1] mb-6">
+        <h1
+          className="text-5xl md:text-7xl font-bold tracking-tight leading-[1.1] mb-6"
+          style={{ textShadow: "0 2px 20px rgba(0, 0, 0, 0.3)" }}
+        >
           The Cost of{" "}
           <span className="text-[var(--accent)]">NEPA</span>
         </h1>
 
-        <p className="text-lg md:text-xl text-[var(--muted)] max-w-2xl mx-auto mb-16 leading-relaxed">
+        <p className="text-lg md:text-xl text-[var(--muted)] max-w-2xl mx-auto mb-10 leading-relaxed">
           How the National Environmental Policy Act shapes the time, cost, and
           outcome of American infrastructure.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
-          {STATS.map((stat) => (
-            <div
+        {/* Stat cards with top accent border */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 max-w-3xl mx-auto">
+          {STATS.map((stat, i) => (
+            <motion.div
               key={stat.label}
-              className="p-6 rounded-xl bg-[var(--card-bg)] border border-[var(--card-border)]"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.9 + i * 0.15, ease: "easeOut" }}
+              className="relative p-6 rounded-xl bg-[var(--card-bg)] border border-[var(--card-border)] overflow-hidden"
             >
+              {/* Top accent line */}
+              <div className="absolute top-0 left-0 right-0 h-[2px] bg-[var(--accent)] opacity-60" />
               <div className="text-4xl md:text-5xl text-[var(--accent)]">
                 <AnimatedNumber
                   value={stat.value}
@@ -99,7 +116,7 @@ export function Hero() {
                 />
               </div>
               <div className="text-sm text-[var(--muted)] mt-2">{stat.label}</div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </motion.div>
@@ -110,7 +127,7 @@ export function Hero() {
         transition={{ delay: 2.5, duration: 1 }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-[var(--muted)]"
       >
-        <span className="text-xs">Scroll to explore</span>
+        <span className="text-xs tracking-wide">Scroll to explore</span>
         <motion.div
           animate={{ y: [0, 8, 0] }}
           transition={{ repeat: Infinity, duration: 1.5 }}

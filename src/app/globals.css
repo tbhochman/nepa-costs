@@ -8,7 +8,7 @@
   --muted: #64748b;
   --card-bg: #1e293b;
   --card-border: #334155;
-  --section-alt: #1a2332;
+  --section-alt: #151e2e;
   --danger: #ef4444;
   --success: #22c55e;
 }
@@ -28,13 +28,32 @@
   --font-mono: var(--font-geist-mono);
 }
 
+/* ── Base ─────────────────────────────────────── */
+
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans), system-ui, sans-serif;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Scrollytelling sticky chart container */
+h1, h2, h3, h4 {
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background: rgba(245, 158, 11, 0.25);
+}
+
+/* ── Scrollytelling sticky layout ─────────────── */
+
 .scroll-section {
   position: relative;
 }
@@ -65,7 +84,12 @@ body {
   min-height: 50vh;
 }
 
-/* D3 chart styles */
+/* ── D3 chart styles ──────────────────────────── */
+
+.chart-container {
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
 .chart-container svg {
   overflow: visible;
 }
@@ -85,7 +109,8 @@ body {
   stroke-opacity: 0.3;
 }
 
-/* Tooltip */
+/* ── Tooltip ──────────────────────────────────── */
+
 .chart-tooltip {
   position: absolute;
   background: var(--card-bg);
@@ -98,7 +123,8 @@ body {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
-/* Source citation badge */
+/* ── Source citation badge ────────────────────── */
+
 .source-badge {
   display: inline-flex;
   align-items: center;
@@ -112,7 +138,8 @@ body {
   cursor: help;
 }
 
-/* Animated counter */
+/* ── Animated counter ─────────────────────────── */
+
 @keyframes countUp {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
@@ -123,12 +150,25 @@ body {
   font-variant-numeric: tabular-nums;
 }
 
-/* Smooth scroll */
-html {
-  scroll-behavior: smooth;
+/* ── Section gradient transitions ─────────────── */
+
+.section-fade-in {
+  background: linear-gradient(
+    to bottom,
+    var(--background) 0%,
+    var(--section-alt) 8%,
+    var(--section-alt) 92%,
+    var(--background) 100%
+  );
 }
 
-/* Selection */
-::selection {
-  background: rgba(245, 158, 11, 0.3);
+/* ── Card hover lift ──────────────────────────── */
+
+.card-hover {
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
 }
