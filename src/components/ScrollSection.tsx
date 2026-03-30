@@ -86,7 +86,7 @@ export function ScrollSection({
           </div>
 
           {/* Scrollable steps */}
-          <div className="lg:w-2/5 space-y-4">
+          <div className="lg:w-2/5 space-y-16">
             {steps.map((step, i) => (
               <StepBlock
                 key={i}
@@ -97,6 +97,8 @@ export function ScrollSection({
                 {step.content}
               </StepBlock>
             ))}
+            {/* Bottom spacer so last step can reach center of viewport */}
+            <div className="h-[30vh]" />
           </div>
         </motion.div>
       </div>
@@ -116,7 +118,8 @@ function StepBlock({
   onInView: () => void;
 }) {
   const { ref } = useInView({
-    threshold: 0.6,
+    threshold: 0.5,
+    rootMargin: "-35% 0px -35% 0px",
     onChange: (inView) => {
       if (inView) onInView();
     },
@@ -125,13 +128,13 @@ function StepBlock({
   return (
     <div
       ref={ref}
-      className={`p-6 rounded-xl border transition-all duration-500 ease-out min-h-[200px] flex items-center ${
+      className={`p-8 rounded-xl border transition-all duration-500 ease-out min-h-[250px] flex items-center ${
         active
           ? "border-[var(--accent)]/30 bg-[var(--accent)]/5"
           : "border-transparent bg-transparent opacity-30"
       }`}
       style={{
-        transform: active ? "scale(1)" : "scale(0.98)",
+        transform: active ? "scale(1)" : "scale(0.97)",
         transition: "all 500ms cubic-bezier(0.4, 0, 0.2, 1)",
       }}
     >
