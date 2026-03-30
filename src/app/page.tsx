@@ -23,11 +23,6 @@ export default function Home() {
         id="pyramid"
         title="The Scale of NEPA"
         subtitle="Three tiers of review, vastly different in scope, cost, and consequence."
-        sources={[
-          { label: "CEQ", url: "https://ceq.doe.gov/nepa-practice/eis-length.html" },
-          { label: "IFP", url: "https://ifp.org/no-nepa-really-is-a-problem-for-clean-energy/" },
-          { label: "DOE", url: "https://www.energy.gov/nepa/nepa-documents" },
-        ]}
         steps={[
           {
             content: (
@@ -39,7 +34,8 @@ export default function Home() {
                   The most rigorous review. Only ~100 are completed per year, but
                   each averages <strong>4.5 years</strong>{" "}and costs around{" "}
                   <strong>$6 million</strong>. Complex EIS can cost tens of
-                  millions.
+                  millions.{" "}
+                  <a href="https://ceq.doe.gov/nepa-practice/eis-length.html" target="_blank" rel="noopener noreferrer" className="text-[var(--accent)] hover:underline text-xs">[CEQ]</a>
                 </p>
               </div>
             ),
@@ -53,7 +49,8 @@ export default function Home() {
                 <p>
                   The middle tier. About <strong>10,000 per year</strong>, costing
                   ~$200K each and taking 1-2 years. EAs determine whether a full
-                  EIS is needed.
+                  EIS is needed.{" "}
+                  <a href="https://ifp.org/no-nepa-really-is-a-problem-for-clean-energy/" target="_blank" rel="noopener noreferrer" className="text-[var(--accent)] hover:underline text-xs">[IFP]</a>
                 </p>
               </div>
             ),
@@ -68,7 +65,8 @@ export default function Home() {
                   The vast majority — <strong>~45,000 per year</strong>,
                   representing 95% of all NEPA reviews. Each costs ~$50K and takes
                   about 105 days. These are for actions deemed unlikely to have
-                  significant environmental effects.
+                  significant environmental effects.{" "}
+                  <a href="https://ceq.doe.gov/nepa-practice/eis-length.html" target="_blank" rel="noopener noreferrer" className="text-[var(--accent)] hover:underline text-xs">[CEQ]</a>
                 </p>
               </div>
             ),
@@ -98,9 +96,6 @@ export default function Home() {
           id="paperwork"
           title="The Growing Paperwork"
           subtitle="EIS documents have grown from a few dozen pages to over 1,700."
-          sources={[
-            { label: "CEQ EIS Length Report, 2020", url: "https://ceq.doe.gov/nepa-practice/eis-length.html" },
-          ]}
           reverse
           steps={[
             {
@@ -108,7 +103,8 @@ export default function Home() {
                 <p>
                   In the 1970s, an EIS was typically <strong>30 pages</strong>.
                   NEPA&apos;s original intent was concise environmental analysis.
-                  CEQ guidelines recommend a <strong>150-page maximum</strong>.
+                  CEQ guidelines recommend a <strong>150-page maximum</strong>.{" "}
+                  <a href="https://ceq.doe.gov/nepa-practice/eis-length.html" target="_blank" rel="noopener noreferrer" className="text-[var(--accent)] hover:underline text-xs">[CEQ]</a>
                 </p>
               ),
             },
@@ -118,7 +114,8 @@ export default function Home() {
                   By 2013-2018, the average EIS had grown to{" "}
                   <strong>661 pages</strong>{" "}of main body text — over{" "}
                   <strong>4x the statutory limit</strong>. The FRA page limit
-                  is shown in red.
+                  is shown in red.{" "}
+                  <a href="https://ceq.doe.gov/nepa-practice/eis-length.html" target="_blank" rel="noopener noreferrer" className="text-[var(--accent)] hover:underline text-xs">[CEQ]</a>
                 </p>
               ),
             },
@@ -131,7 +128,8 @@ export default function Home() {
                   EIS documents, agencies use appendices — which don&apos;t
                   count toward the limit — to work around the cap. The
                   appendices alone (1,042 pages) are 7x longer than the
-                  recommended total.
+                  recommended total.{" "}
+                  <a href="https://ceq.doe.gov/nepa-practice/eis-length.html" target="_blank" rel="noopener noreferrer" className="text-[var(--accent)] hover:underline text-xs">[CEQ]</a>
                 </p>
               ),
             },
@@ -145,17 +143,14 @@ export default function Home() {
         id="timelines"
         title="How Long Does It Take?"
         subtitle="EIS completion times peaked in 2017, then began improving — but most still miss the deadline."
-        sources={[
-          { label: "CEQ EIS Timeline Report, 2025", url: "https://ceq.doe.gov/nepa-practice/eis-timelines.html" },
-          { label: "RFF, 2025", url: "https://www.rff.org/publications/reports/how-long-does-it-take-national-environmental-policy-act-timelines-and-outcomes-for-clean-energy-projects/" },
-        ]}
         steps={[
           {
             content: (
               <p>
                 From 2010 to 2024, the median EIS completion time ranged from{" "}
                 <strong>2.2 to 4.7 years</strong>. The green line shows the
-                2-year target set by the FAST-41 and Fiscal Responsibility Act.
+                2-year target set by the FAST-41 and Fiscal Responsibility Act.{" "}
+                <a href="https://ceq.doe.gov/nepa-practice/eis-timelines.html" target="_blank" rel="noopener noreferrer" className="text-[var(--accent)] hover:underline text-xs">[CEQ]</a>
               </p>
             ),
           },
@@ -164,7 +159,8 @@ export default function Home() {
               <p>
                 Timelines peaked at <strong>4.7 years in 2017</strong>, then
                 began declining. This may reflect reform efforts, changes in
-                project mix, or agencies prioritizing simpler reviews.
+                project mix, or agencies prioritizing simpler reviews.{" "}
+                <a href="https://ceq.doe.gov/nepa-practice/eis-timelines.html" target="_blank" rel="noopener noreferrer" className="text-[var(--accent)] hover:underline text-xs">[CEQ]</a>
               </p>
             ),
           },
@@ -218,12 +214,6 @@ export default function Home() {
           id="costs"
           title="The Cost Escalation"
           subtitle="From $50,000 to $25 million — the staggering range of NEPA review costs."
-          sources={[
-            { label: "DOE", url: "https://www.energy.gov/nepa/nepa-documents" },
-            { label: "GAO-14-369", url: "https://www.gao.gov/products/gao-14-369" },
-            { label: "IFP", url: "https://ifp.org/no-nepa-really-is-a-problem-for-clean-energy/" },
-            { label: "Construction Physics", url: "https://www.construction-physics.com/p/how-nepa-works" },
-          ]}
           reverse
           steps={[
             {
@@ -244,7 +234,8 @@ export default function Home() {
                   The cost of a single review is only part of the picture. EIS
                   costs also vary by agency and project complexity. DOE&apos;s
                   average EIS costs <strong>$6 million</strong> — the
-                  government-wide average is likely higher.
+                  government-wide average is likely higher.{" "}
+                  <a href="https://www.energy.gov/nepa/nepa-documents" target="_blank" rel="noopener noreferrer" className="text-[var(--accent)] hover:underline text-xs">[DOE]</a>
                 </p>
               ),
             },
@@ -269,11 +260,6 @@ export default function Home() {
         id="clean-energy"
         title="The Clean Energy Paradox"
         subtitle="NEPA review requirements fall disproportionately on clean energy projects."
-        sources={[
-          { label: "IFP", url: "https://ifp.org/how-nepa-will-tax-clean-energy/" },
-          { label: "DOE", url: "https://www.energy.gov/nepa/nepa-documents" },
-          { label: "CEQ", url: "https://ceq.doe.gov/nepa-practice/eis-length.html" },
-        ]}
         steps={[
           {
             content: (
@@ -291,7 +277,8 @@ export default function Home() {
                 Offshore wind illustrates the bottleneck:{" "}
                 <strong>42 MW operational</strong> vs.{" "}
                 <strong>18,581 MW stuck in permitting</strong>. The capacity
-                waiting in the queue is 442x what&apos;s already built.
+                waiting in the queue is 442x what&apos;s already built.{" "}
+                <a href="https://www.energy.gov/nepa/nepa-documents" target="_blank" rel="noopener noreferrer" className="text-[var(--accent)] hover:underline text-xs">[DOE]</a>
               </p>
             ),
           },
@@ -301,7 +288,8 @@ export default function Home() {
                 A single geothermal project can require{" "}
                 <strong>6 separate NEPA reviews</strong> — one for each phase from
                 land access through construction. Each review restarts the clock
-                and creates new litigation exposure.
+                and creates new litigation exposure.{" "}
+                <a href="https://ifp.org/how-nepa-will-tax-clean-energy/" target="_blank" rel="noopener noreferrer" className="text-[var(--accent)] hover:underline text-xs">[IFP]</a>
               </p>
             ),
           },
@@ -315,11 +303,7 @@ export default function Home() {
           id="litigation"
           title="Who Sues and Who Wins?"
           subtitle="NEPA litigation patterns reveal who challenges projects, how often they succeed, and how long it takes."
-          sources={[
-          { label: "Breakthrough Institute, 2024", url: "https://thebreakthrough.org/issues/energy/understanding-nepa-litigation" },
-          { label: "RFF, 2025", url: "https://www.rff.org/publications/reports/taking-green-energy-projects-to-court-nepa-review-and-court-challenges-to-renewable-energy/" },
-        ]}
-          reverse
+            reverse
           steps={[
             {
               content: (
@@ -338,7 +322,8 @@ export default function Home() {
                   Agencies win <strong>~80% of the time</strong>{" "}on appeal — but
                   winning still takes an average of{" "}
                   <strong>4.2 years</strong>{" "}from EIS publication to resolution.
-                  The process itself is the punishment.
+                  The process itself is the punishment.{" "}
+                  <a href="https://thebreakthrough.org/issues/energy/understanding-nepa-litigation" target="_blank" rel="noopener noreferrer" className="text-[var(--accent)] hover:underline text-xs">[Breakthrough]</a>
                 </p>
               ),
             },
@@ -364,11 +349,6 @@ export default function Home() {
         id="infrastructure"
         title="The Infrastructure Impact"
         subtitle="355 major projects, international comparisons, and the bottom line."
-        sources={[
-          { label: "Bennon & Wilson, 2023", url: "https://cddrl.fsi.stanford.edu/publication/nepa-litigation-over-large-energy-and-transport-infrastructure-projects" },
-          { label: "Liscow & Brooks", url: "https://law.yale.edu/yls-today/news/zachary-liscow-and-leah-brooks-cost-highway-construction" },
-          { label: "NAM/FAI", url: "https://nam.org/8-billion-a-year-the-cost-of-americas-broken-permitting-system-to-manufacturers-36024/" },
-        ]}
         steps={[
           {
             content: (
@@ -401,7 +381,8 @@ export default function Home() {
                 Cancellation rates vary sharply by sector. Solar (32%) and wind
                 (31%) projects are cancelled at roughly double the rate of
                 transmission (12%). Energy projects face shorter permits but
-                higher litigation and cancellation rates.
+                higher litigation and cancellation rates.{" "}
+                <a href="https://cddrl.fsi.stanford.edu/publication/nepa-litigation-over-large-energy-and-transport-infrastructure-projects" target="_blank" rel="noopener noreferrer" className="text-[var(--accent)] hover:underline text-xs">[Bennon & Wilson]</a>
               </p>
             ),
           },

@@ -8,18 +8,10 @@ interface Step {
   content: ReactNode;
 }
 
-interface Source {
-  label: string;
-  url?: string;
-}
-
 interface ScrollSectionProps {
   id: string;
   title: string;
   subtitle?: string;
-  source?: string;
-  sourceUrl?: string;
-  sources?: Source[];
   steps: Step[];
   chart: (activeStep: number) => ReactNode;
   reverse?: boolean;
@@ -29,9 +21,6 @@ export function ScrollSection({
   id,
   title,
   subtitle,
-  source,
-  sourceUrl,
-  sources,
   steps,
   chart,
   reverse = false,
@@ -57,46 +46,6 @@ export function ScrollSection({
           </h2>
           {subtitle && (
             <p className="text-[var(--muted)] text-lg">{subtitle}</p>
-          )}
-          {sources && sources.length > 0 && (
-            <div className="mt-3 flex flex-wrap gap-x-1 text-xs text-[var(--muted)]">
-              <span>Sources:</span>
-              {sources.map((s, i) => (
-                <span key={i}>
-                  {s.url ? (
-                    <a
-                      href={s.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-[var(--accent)]/70 hover:text-[var(--accent)] hover:underline transition-colors"
-                    >
-                      {s.label}
-                    </a>
-                  ) : (
-                    <span className="text-[var(--muted)]">{s.label}</span>
-                  )}
-                  {i < sources.length - 1 && <span className="text-[var(--muted)]">,{" "}</span>}
-                </span>
-              ))}
-            </div>
-          )}
-          {/* Legacy single source fallback */}
-          {!sources && source && (
-            <div className="mt-3 text-xs text-[var(--muted)]">
-              Source:{" "}
-              {sourceUrl ? (
-                <a
-                  href={sourceUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[var(--accent)]/70 hover:text-[var(--accent)] hover:underline transition-colors"
-                >
-                  {source}
-                </a>
-              ) : (
-                <span>{source}</span>
-              )}
-            </div>
           )}
         </motion.div>
 
