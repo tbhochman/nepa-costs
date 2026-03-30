@@ -22,7 +22,7 @@ export default function Home() {
       <ScrollSection
         id="pyramid"
         title="The Scale of NEPA"
-        subtitle="Three tiers of review, vastly different in scope, cost, and consequence."
+        subtitle={<>Three tiers of review, vastly different in scope, cost, and consequence. <a href="https://ceq.doe.gov/nepa-practice/eis-length.html" target="_blank" rel="noopener noreferrer" className="text-[var(--accent)] hover:underline text-xs">[CEQ]</a> <a href="https://ifp.org/no-nepa-really-is-a-problem-for-clean-energy/" target="_blank" rel="noopener noreferrer" className="text-[var(--accent)] hover:underline text-xs">[IFP]</a></>}
         steps={[
           {
             content: (
@@ -34,8 +34,7 @@ export default function Home() {
                   The most rigorous review. Only ~100 are completed per year, but
                   each averages <strong>4.5 years</strong>{" "}and costs around{" "}
                   <strong>$6 million</strong>. Complex EIS can cost tens of
-                  millions.{" "}
-                  <a href="https://ceq.doe.gov/nepa-practice/eis-length.html" target="_blank" rel="noopener noreferrer" className="text-[var(--accent)] hover:underline text-xs">[CEQ]</a>
+                  millions.
                 </p>
               </div>
             ),
@@ -49,8 +48,7 @@ export default function Home() {
                 <p>
                   The middle tier. About <strong>10,000 per year</strong>, costing
                   ~$200K each and taking 1-2 years. EAs determine whether a full
-                  EIS is needed.{" "}
-                  <a href="https://ifp.org/no-nepa-really-is-a-problem-for-clean-energy/" target="_blank" rel="noopener noreferrer" className="text-[var(--accent)] hover:underline text-xs">[IFP]</a>
+                  EIS is needed.
                 </p>
               </div>
             ),
@@ -65,8 +63,7 @@ export default function Home() {
                   The vast majority — <strong>~45,000 per year</strong>,
                   representing 95% of all NEPA reviews. Each costs ~$50K and takes
                   about 105 days. These are for actions deemed unlikely to have
-                  significant environmental effects.{" "}
-                  <a href="https://ceq.doe.gov/nepa-practice/eis-length.html" target="_blank" rel="noopener noreferrer" className="text-[var(--accent)] hover:underline text-xs">[CEQ]</a>
+                  significant environmental effects.
                 </p>
               </div>
             ),
@@ -95,7 +92,7 @@ export default function Home() {
         <ScrollSection
           id="paperwork"
           title="The Growing Paperwork"
-          subtitle="EIS documents have grown from a few dozen pages to over 1,700."
+          subtitle={<>EIS documents have grown from a few dozen pages to over 1,700. <a href="https://ceq.doe.gov/nepa-practice/eis-length.html" target="_blank" rel="noopener noreferrer" className="text-[var(--accent)] hover:underline text-xs">[CEQ]</a></>}
           reverse
           steps={[
             {
@@ -103,8 +100,7 @@ export default function Home() {
                 <p>
                   In the 1970s, an EIS was typically <strong>30 pages</strong>.
                   NEPA&apos;s original intent was concise environmental analysis.
-                  CEQ guidelines recommend a <strong>150-page maximum</strong>.{" "}
-                  <a href="https://ceq.doe.gov/nepa-practice/eis-length.html" target="_blank" rel="noopener noreferrer" className="text-[var(--accent)] hover:underline text-xs">[CEQ]</a>
+                  CEQ guidelines recommend a <strong>150-page maximum</strong>.
                 </p>
               ),
             },
@@ -114,8 +110,7 @@ export default function Home() {
                   By 2013-2018, the average EIS had grown to{" "}
                   <strong>661 pages</strong>{" "}of main body text — over{" "}
                   <strong>4x the statutory limit</strong>. The FRA page limit
-                  is shown in red.{" "}
-                  <a href="https://ceq.doe.gov/nepa-practice/eis-length.html" target="_blank" rel="noopener noreferrer" className="text-[var(--accent)] hover:underline text-xs">[CEQ]</a>
+                  is shown in red.
                 </p>
               ),
             },
@@ -128,8 +123,7 @@ export default function Home() {
                   EIS documents, agencies use appendices — which don&apos;t
                   count toward the limit — to work around the cap. The
                   appendices alone (1,042 pages) are 7x longer than the
-                  recommended total.{" "}
-                  <a href="https://ceq.doe.gov/nepa-practice/eis-length.html" target="_blank" rel="noopener noreferrer" className="text-[var(--accent)] hover:underline text-xs">[CEQ]</a>
+                  recommended total.
                 </p>
               ),
             },
@@ -142,15 +136,14 @@ export default function Home() {
       <ScrollSection
         id="timelines"
         title="How Long Does It Take?"
-        subtitle="EIS completion times peaked in 2017, then began improving — but most still miss the deadline."
+        subtitle={<>EIS completion times peaked in 2017, then began improving — but most still miss the deadline. <a href="https://ceq.doe.gov/nepa-practice/eis-timelines.html" target="_blank" rel="noopener noreferrer" className="text-[var(--accent)] hover:underline text-xs">[CEQ]</a></>}
         steps={[
           {
             content: (
               <p>
                 From 2010 to 2024, the median EIS completion time ranged from{" "}
                 <strong>2.2 to 4.7 years</strong>. The green line shows the
-                2-year target set by the FAST-41 and Fiscal Responsibility Act.{" "}
-                <a href="https://ceq.doe.gov/nepa-practice/eis-timelines.html" target="_blank" rel="noopener noreferrer" className="text-[var(--accent)] hover:underline text-xs">[CEQ]</a>
+                2-year target set by the FAST-41 and Fiscal Responsibility Act.
               </p>
             ),
           },
@@ -159,8 +152,7 @@ export default function Home() {
               <p>
                 Timelines peaked at <strong>4.7 years in 2017</strong>, then
                 began declining. This may reflect reform efforts, changes in
-                project mix, or agencies prioritizing simpler reviews.{" "}
-                <a href="https://ceq.doe.gov/nepa-practice/eis-timelines.html" target="_blank" rel="noopener noreferrer" className="text-[var(--accent)] hover:underline text-xs">[CEQ]</a>
+                project mix, or agencies prioritizing simpler reviews.
               </p>
             ),
           },

@@ -11,7 +11,7 @@ interface Step {
 interface ScrollSectionProps {
   id: string;
   title: string;
-  subtitle?: string;
+  subtitle?: ReactNode;
   steps: Step[];
   chart: (activeStep: number) => ReactNode;
   reverse?: boolean;
