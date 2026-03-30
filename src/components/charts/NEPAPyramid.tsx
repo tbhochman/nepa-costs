@@ -48,12 +48,22 @@ export function NEPAPyramid({ activeStep }: NEPAPyramidProps) {
           const isHighlighted = activeStep === i;
           const isPast = activeStep > i;
           return (
-            <div
+            <motion.div
               key={level.type}
-              className="w-full transition-all duration-700 ease-out"
+              className="w-full"
+              initial={{ opacity: 0, y: 20, scale: 0.95 }}
+              animate={{
+                opacity: isHighlighted ? 1 : isPast ? 0.5 : 0.2,
+                y: 0,
+                scale: 1,
+              }}
+              transition={{
+                duration: 0.6,
+                delay: i * 0.15,
+                ease: "easeOut",
+              }}
               style={{
                 maxWidth: `${level.width}%`,
-                opacity: isHighlighted ? 1 : isPast ? 0.5 : 0.2,
               }}
             >
               <div
@@ -121,7 +131,7 @@ export function NEPAPyramid({ activeStep }: NEPAPyramidProps) {
                   )}
                 </AnimatePresence>
               </div>
-            </div>
+            </motion.div>
           );
         })}
       </div>

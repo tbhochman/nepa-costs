@@ -2,6 +2,7 @@
 
 import { useState, ReactNode } from "react";
 import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
 
 interface Step {
   content: ReactNode;
@@ -29,12 +30,21 @@ export function ScrollSection({
   reverse = false,
 }: ScrollSectionProps) {
   const [activeStep, setActiveStep] = useState(0);
+  const { ref: sectionRef, inView: sectionInView } = useInView({
+    threshold: 0.05,
+    triggerOnce: true,
+  });
 
   return (
-    <section id={id} className="py-24 px-4">
+    <section id={id} className="py-24 px-4" ref={sectionRef}>
       <div className="max-w-7xl mx-auto">
         {/* Section header */}
-        <div className="max-w-2xl mb-16">
+        <motion.div
+          className="max-w-2xl mb-16"
+          initial={{ opacity: 0, y: 30 }}
+          animate={sectionInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.7, ease: "easeOut" }}
+        >
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-3">
             {title}
           </h2>
@@ -57,13 +67,16 @@ export function ScrollSection({
               )}
             </div>
           )}
-        </div>
+        </motion.div>
 
         {/* Side-by-side layout */}
-        <div
+        <motion.div
           className={`flex flex-col lg:flex-row gap-8 ${
             reverse ? "lg:flex-row-reverse" : ""
           }`}
+          initial={{ opacity: 0, y: 40 }}
+          animate={sectionInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
         >
           {/* Sticky chart */}
           <div className="lg:w-3/5 lg:sticky lg:top-20 lg:self-start">
@@ -85,7 +98,7 @@ export function ScrollSection({
               </StepBlock>
             ))}
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
@@ -112,11 +125,15 @@ function StepBlock({
   return (
     <div
       ref={ref}
-      className={`p-6 rounded-xl border transition-all duration-300 min-h-[200px] flex items-center ${
+      className={`p-6 rounded-xl border transition-all duration-500 ease-out min-h-[200px] flex items-center ${
         active
           ? "border-[var(--accent)]/30 bg-[var(--accent)]/5"
-          : "border-transparent bg-transparent opacity-40"
+          : "border-transparent bg-transparent opacity-30"
       }`}
+      style={{
+        transform: active ? "scale(1)" : "scale(0.98)",
+        transition: "all 500ms cubic-bezier(0.4, 0, 0.2, 1)",
+      }}
     >
       <div>
         <div className="text-xs text-[var(--accent)] font-mono mb-2">

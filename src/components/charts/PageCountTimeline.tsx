@@ -101,8 +101,9 @@ export function PageCountTimeline({ activeStep }: PageCountTimelineProps) {
         .attr("opacity", 1);
     }
 
-    // ALL bars appear together
-    const animDuration = hasAnimated ? 0 : 800;
+    // Bars appear with stagger — each bar grows one after another
+    const animDuration = hasAnimated ? 0 : 700;
+    const staggerDelay = hasAnimated ? 0 : 200;
 
     g.selectAll("rect")
       .data(data)
@@ -117,11 +118,12 @@ export function PageCountTimeline({ activeStep }: PageCountTimelineProps) {
       .attr("rx", 4)
       .transition()
       .duration(animDuration)
+      .delay((_d, i) => i * staggerDelay)
       .ease(d3.easeCubicOut)
       .attr("y", (d) => y(d.pages))
       .attr("height", (d) => innerH - y(d.pages));
 
-    // Labels on bars
+    // Labels on bars — appear after each bar finishes growing
     g.selectAll(".bar-label")
       .data(data)
       .join("text")
@@ -136,7 +138,7 @@ export function PageCountTimeline({ activeStep }: PageCountTimelineProps) {
       .text((d) => d.pages.toLocaleString())
       .transition()
       .duration(400)
-      .delay(hasAnimated ? 0 : 600)
+      .delay((_d, i) => hasAnimated ? 0 : (i * staggerDelay) + animDuration - 100)
       .attr("opacity", 1);
 
     // Axes
