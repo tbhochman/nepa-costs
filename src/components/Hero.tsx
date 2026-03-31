@@ -58,44 +58,33 @@ export function Hero() {
       id="hero"
       className="relative min-h-screen flex flex-col items-center justify-center px-4 overflow-hidden"
     >
-      {/* Background grid */}
+      {/* Subtle dot pattern */}
       <div className="absolute inset-0 opacity-[0.03]" style={{
-        backgroundImage: "linear-gradient(var(--muted) 1px, transparent 1px), linear-gradient(90deg, var(--muted) 1px, transparent 1px)",
-        backgroundSize: "60px 60px",
+        backgroundImage: "radial-gradient(#6b7280 1px, transparent 1px)",
+        backgroundSize: "24px 24px",
       }} />
-
-      {/* Radial amber glow behind title */}
-      <div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] rounded-full pointer-events-none"
-        style={{
-          background: "radial-gradient(ellipse, rgba(245, 158, 11, 0.06) 0%, transparent 70%)",
-        }}
-      />
 
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="relative z-10 text-center max-w-4xl"
+        className="relative z-10 text-center max-w-3xl"
       >
-        <div className="text-[var(--accent)] text-sm font-mono tracking-widest uppercase mb-6">
+        <div className="text-[var(--accent)] text-xs font-mono tracking-[0.2em] uppercase mb-8">
           An Interactive Data Story
         </div>
 
-        <h1
-          className="text-5xl md:text-7xl font-bold tracking-tight leading-[1.1] mb-6"
-          style={{ textShadow: "0 2px 20px rgba(0, 0, 0, 0.3)" }}
-        >
+        <h1 className="text-5xl md:text-7xl font-bold tracking-tight leading-[1.05] mb-6 text-[#111827]">
           The Cost of{" "}
           <span className="text-[var(--accent)]">NEPA</span>
         </h1>
 
-        <p className="text-lg md:text-xl text-[var(--muted)] max-w-2xl mx-auto mb-10 leading-relaxed">
+        <p className="text-lg md:text-xl text-[var(--muted)] max-w-2xl mx-auto mb-12 leading-relaxed">
           How the National Environmental Policy Act shapes the time, cost, and
           outcome of American infrastructure.
         </p>
 
-        {/* Stat cards with top accent border */}
+        {/* Stat cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 max-w-3xl mx-auto">
           {STATS.map((stat, i) => (
             <motion.div
@@ -103,10 +92,9 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.9 + i * 0.15, ease: "easeOut" }}
-              className="relative p-6 rounded-xl bg-[var(--card-bg)] border border-[var(--card-border)] overflow-hidden"
+              className="relative p-6 rounded-xl bg-white border border-[var(--card-border)] shadow-sm overflow-hidden"
             >
-              {/* Top accent line */}
-              <div className="absolute top-0 left-0 right-0 h-[2px] bg-[var(--accent)] opacity-60" />
+              <div className="absolute top-0 left-0 right-0 h-[2px] bg-[var(--accent)]" />
               <div className="text-4xl md:text-5xl text-[var(--accent)]">
                 <AnimatedNumber
                   value={stat.value}
@@ -131,9 +119,9 @@ export function Hero() {
         <motion.div
           animate={{ y: [0, 8, 0] }}
           transition={{ repeat: Infinity, duration: 1.5 }}
-          className="w-5 h-8 rounded-full border-2 border-[var(--muted)] flex items-start justify-center p-1"
+          className="w-5 h-8 rounded-full border-2 border-[var(--muted)]/40 flex items-start justify-center p-1"
         >
-          <div className="w-1 h-2 bg-[var(--muted)] rounded-full" />
+          <div className="w-1 h-2 bg-[var(--muted)]/40 rounded-full" />
         </motion.div>
       </motion.div>
     </section>

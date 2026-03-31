@@ -1,16 +1,16 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0f172a;
-  --foreground: #e2e8f0;
-  --accent: #f59e0b;
-  --accent-light: #fbbf24;
-  --muted: #64748b;
-  --card-bg: #1e293b;
-  --card-border: #334155;
-  --section-alt: #151e2e;
-  --danger: #ef4444;
-  --success: #22c55e;
+  --background: #fafafa;
+  --foreground: #1a1a1a;
+  --accent: #c0392b;
+  --accent-light: #e74c3c;
+  --muted: #6b7280;
+  --card-bg: #ffffff;
+  --card-border: #e5e7eb;
+  --section-alt: #f3f4f6;
+  --danger: #dc2626;
+  --success: #16a34a;
 }
 
 @theme inline {
@@ -40,8 +40,9 @@ body {
 }
 
 h1, h2, h3, h4 {
-  letter-spacing: -0.02em;
-  line-height: 1.2;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+  color: #111827;
 }
 
 html {
@@ -49,7 +50,7 @@ html {
 }
 
 ::selection {
-  background: rgba(245, 158, 11, 0.25);
+  background: rgba(192, 57, 43, 0.15);
 }
 
 /* ── Scrollytelling sticky layout ─────────────── */
@@ -87,7 +88,7 @@ html {
 /* ── D3 chart styles ──────────────────────────── */
 
 .chart-container {
-  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
 }
 
 .chart-container svg {
@@ -106,7 +107,7 @@ html {
 
 .chart-container .grid line {
   stroke: var(--card-border);
-  stroke-opacity: 0.3;
+  stroke-opacity: 0.5;
 }
 
 /* ── Tooltip ──────────────────────────────────── */
@@ -120,7 +121,7 @@ html {
   font-size: 13px;
   pointer-events: none;
   z-index: 50;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 /* ── Source citation badge ────────────────────── */
@@ -130,8 +131,8 @@ html {
   align-items: center;
   gap: 4px;
   padding: 2px 8px;
-  background: rgba(245, 158, 11, 0.1);
-  border: 1px solid rgba(245, 158, 11, 0.2);
+  background: rgba(192, 57, 43, 0.06);
+  border: 1px solid rgba(192, 57, 43, 0.12);
   border-radius: 4px;
   font-size: 11px;
   color: var(--accent);
@@ -156,8 +157,8 @@ html {
   background: linear-gradient(
     to bottom,
     var(--background) 0%,
-    var(--section-alt) 8%,
-    var(--section-alt) 92%,
+    var(--section-alt) 6%,
+    var(--section-alt) 94%,
     var(--background) 100%
   );
 }
@@ -170,5 +171,5 @@ html {
 
 .card-hover:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }

@@ -56,7 +56,7 @@ function SectorCard({ sector, onClick, isSelected }: { sector: Sector; onClick: 
       className={`text-left rounded-xl border transition-all overflow-hidden card-hover ${
         isSelected
           ? "border-[var(--accent)] bg-[var(--accent)]/5 ring-1 ring-[var(--accent)]/20"
-          : "border-[var(--card-border)] bg-[var(--card-bg)] hover:border-[var(--muted)]"
+          : "border-[var(--card-border)] bg-white shadow-sm hover:border-[var(--muted)]"
       }`}
     >
       {/* Sector image banner */}
@@ -68,7 +68,7 @@ function SectorCard({ sector, onClick, isSelected }: { sector: Sector; onClick: 
             className="w-full h-full object-cover"
             loading="lazy"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[var(--card-bg)] to-transparent opacity-60" />
+          <div className="absolute inset-0 bg-gradient-to-t from-white to-transparent opacity-40" />
         </div>
       )}
       <div className="p-5">

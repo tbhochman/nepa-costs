@@ -11,7 +11,7 @@ const levels = [
     cost: 6000000,
     time: "4.5 years",
     share: "~0.5%",
-    color: "#f59e0b",
+    color: "#c0392b",
     width: 55,
   },
   {
@@ -21,7 +21,7 @@ const levels = [
     cost: 200000,
     time: "1-2 years",
     share: "~4.5%",
-    color: "#3b82f6",
+    color: "#2563eb",
     width: 78,
   },
   {
@@ -31,7 +31,7 @@ const levels = [
     cost: 50000,
     time: "~105 days",
     share: "~95%",
-    color: "#22c55e",
+    color: "#16a34a",
     width: 100,
   },
 ];

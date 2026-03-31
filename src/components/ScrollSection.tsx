@@ -34,15 +34,14 @@ export function ScrollSection({
   return (
     <section id={id} className="py-28 px-4" ref={sectionRef}>
       <div className="max-w-7xl mx-auto">
-        {/* Section header with accent line */}
+        {/* Section header */}
         <motion.div
           className="max-w-2xl mb-16"
           initial={{ opacity: 0, y: 30 }}
           animate={sectionInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7, ease: "easeOut" }}
         >
-          {/* Accent line */}
-          <div className="w-16 h-[3px] bg-[var(--accent)] mb-6 rounded-full opacity-70" />
+          <div className="w-12 h-[3px] bg-[var(--accent)] mb-6 rounded-full" />
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-3">
             {title}
           </h2>
@@ -62,7 +61,7 @@ export function ScrollSection({
         >
           {/* Sticky chart */}
           <div className="lg:w-3/5 lg:sticky lg:top-20 lg:self-start">
-            <div className="chart-container bg-[var(--card-bg)] rounded-2xl border border-[var(--card-border)] p-6 min-h-[400px] flex items-center justify-center">
+            <div className="chart-container bg-white rounded-2xl border border-[var(--card-border)] p-6 min-h-[400px] flex items-center justify-center">
               {chart(activeStep)}
             </div>
           </div>
@@ -79,7 +78,6 @@ export function ScrollSection({
                 {step.content}
               </StepBlock>
             ))}
-            {/* Bottom spacer so last step can reach center of viewport */}
             <div className="h-[30vh]" />
           </div>
         </motion.div>
@@ -112,7 +110,7 @@ function StepBlock({
       ref={ref}
       className={`relative rounded-xl transition-all duration-500 ease-out min-h-[250px] flex items-center overflow-hidden ${
         active
-          ? "bg-[var(--card-bg)]/80"
+          ? "bg-white shadow-sm"
           : "bg-transparent opacity-40"
       }`}
       style={{
@@ -131,7 +129,7 @@ function StepBlock({
         <div className="text-xs text-[var(--accent)] font-mono mb-2">
           {String(index + 1).padStart(2, "0")}
         </div>
-        <div className="text-sm md:text-base leading-relaxed">{children}</div>
+        <div className="text-sm md:text-base leading-relaxed text-[var(--foreground)]">{children}</div>
       </div>
     </div>
   );
