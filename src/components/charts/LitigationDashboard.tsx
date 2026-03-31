@@ -207,26 +207,6 @@ export function LitigationDashboard({ activeStep }: LitigationDashboardProps) {
         </motion.div>
       )}
 
-      {/* Overall litigation rate context */}
-      {activeStep >= 3 && (
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="p-4 rounded-xl border border-[var(--accent)]/20 bg-[var(--accent)]/5"
-        >
-          <div className="text-sm">
-            <span className="font-semibold text-[var(--accent)]">
-              Important context:
-            </span>{" "}
-            Only ~0.22% of all NEPA decisions face litigation (1 in ~500). The
-            high rates above apply to major EIS projects specifically — the vast
-            majority of NEPA reviews proceed without legal challenge.
-          </div>
-          <div className="mt-1 text-xs text-[var(--muted)]">
-            Source: Niskanen/CATF analysis
-          </div>
-        </motion.div>
-      )}
     </div>
   );
 }
