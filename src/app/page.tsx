@@ -66,9 +66,10 @@ export default function Home() {
                 </p>
                 <p>
                   The vast majority — <strong>~45,000 per year</strong>,
-                  representing 95% of all NEPA reviews. Each costs ~$50K and takes
-                  about 105 days. These are for actions deemed unlikely to have
-                  significant environmental effects.
+                  representing 95% of all NEPA reviews. On average, Categorical
+                  Exclusions cost ~$50K and take about 105 days. These are for
+                  actions deemed unlikely to have significant environmental
+                  effects.
                 </p>
               </div>
             ),
