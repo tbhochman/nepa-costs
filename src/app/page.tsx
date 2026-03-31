@@ -66,10 +66,13 @@ export default function Home() {
                 </p>
                 <p>
                   The vast majority — <strong>~45,000 per year</strong>,
-                  representing 95% of all NEPA reviews. On average, Categorical
-                  Exclusions cost ~$50K and take about 105 days. These are for
-                  actions deemed unlikely to have significant environmental
-                  effects.
+                  representing 95% of all NEPA reviews. These are for actions
+                  deemed unlikely to have significant environmental effects, but
+                  the work involved varies enormously: DOE completes CEs in{" "}
+                  <strong>1-2 days</strong>, while the Forest Service median is{" "}
+                  <strong>105 days</strong>. FHWA CEs can run 100+ pages and
+                  take months.{" "}
+                  <a href="https://www.construction-physics.com/p/how-nepa-works" target="_blank" rel="noopener noreferrer" className="text-[var(--accent)] hover:underline text-xs">[Construction Physics]</a>
                 </p>
               </div>
             ),

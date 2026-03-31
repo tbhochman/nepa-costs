@@ -29,7 +29,7 @@ const levels = [
     fullName: "Categorical Exclusion",
     volume: 45000,
     cost: 50000,
-    time: "~105 days",
+    time: "1 day–6 mo",
     share: "~95%",
     color: "#FFA300",
     width: 100,
