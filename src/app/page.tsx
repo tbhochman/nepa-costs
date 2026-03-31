@@ -47,8 +47,13 @@ export default function Home() {
                 </p>
                 <p>
                   The middle tier. About <strong>10,000 per year</strong>, costing
-                  ~$200K each and taking 1-2 years. EAs determine whether a full
-                  EIS is needed.
+                  ~$200K each and taking 1-2 years.
+                </p>
+                <p className="mt-2">
+                  EAs were never described in the original law — they started as
+                  a way of determining whether an EIS is required, and have since
+                  become a process unto themselves that routinely take years to
+                  complete.
                 </p>
               </div>
             ),
