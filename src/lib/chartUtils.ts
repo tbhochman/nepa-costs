@@ -1,29 +1,34 @@
+// FAI Brand Color System
+// Primary: International Orange #FF4F00, Cod Gray #121212, White #FFFFFF
+// Secondary: Celestial Blue #4997D0, Chrome Yellow #FFA300, Timberwolf #D9D9D6
+
 export const CHART_COLORS = {
-  accent: "#c0392b",
-  accentLight: "#e74c3c",
-  muted: "#6b7280",
-  foreground: "#1a1a1a",
-  cardBorder: "#e5e7eb",
-  danger: "#dc2626",
-  success: "#16a34a",
-  blue: "#2563eb",
-  purple: "#7c3aed",
-  teal: "#0d9488",
-  orange: "#ea580c",
-  pink: "#db2777",
-  slate: "#6b7280",
+  accent: "#FF4F00",       // International Orange — primary data series
+  accentLight: "#ff7033",
+  muted: "#D9D9D6",        // Timberwolf
+  foreground: "#ffffff",
+  cardBorder: "#2e2e2e",
+  danger: "#ef4444",
+  success: "#22c55e",
+  blue: "#4997D0",          // Celestial Blue — secondary series
+  yellow: "#FFA300",        // Chrome Yellow — tertiary series
+  purple: "#8b5cf6",
+  teal: "#14b8a6",
+  orange: "#FF4F00",
+  pink: "#ec4899",
+  slate: "#D9D9D6",
 };
 
 export const SECTOR_COLORS: Record<string, string> = {
-  solar: "#ea580c",
-  wind: "#2563eb",
-  transmission: "#7c3aed",
-  geothermal: "#dc2626",
-  highways: "#4b5563",
-  forestry: "#16a34a",
-  pipelines: "#ea580c",
-  mining: "#6b7280",
-  water: "#0d9488",
+  solar: "#FFA300",         // Chrome Yellow
+  wind: "#4997D0",          // Celestial Blue
+  transmission: "#8b5cf6",
+  geothermal: "#FF4F00",    // International Orange
+  highways: "#D9D9D6",      // Timberwolf
+  forestry: "#22c55e",
+  pipelines: "#FFA300",
+  mining: "#D9D9D6",
+  water: "#4997D0",
 };
 
 export function formatCost(value: number): string {

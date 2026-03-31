@@ -61,7 +61,7 @@ export function ScrollSection({
         >
           {/* Sticky chart */}
           <div className="lg:w-3/5 lg:sticky lg:top-20 lg:self-start">
-            <div className="chart-container bg-white rounded-2xl border border-[var(--card-border)] p-6 min-h-[400px] flex items-center justify-center">
+            <div className="chart-container bg-[var(--card-bg)] rounded-2xl border border-[var(--card-border)] p-6 min-h-[400px] flex items-center justify-center">
               {chart(activeStep)}
             </div>
           </div>
@@ -110,7 +110,7 @@ function StepBlock({
       ref={ref}
       className={`relative rounded-xl transition-all duration-500 ease-out min-h-[250px] flex items-center overflow-hidden ${
         active
-          ? "bg-white shadow-sm"
+          ? "bg-[var(--card-bg)]"
           : "bg-transparent opacity-40"
       }`}
       style={{
@@ -126,7 +126,7 @@ function StepBlock({
         }}
       />
       <div className="p-8 pl-7">
-        <div className="text-xs text-[var(--accent)] font-mono mb-2">
+        <div className="text-xs text-[var(--accent)] font-[family-name:var(--font-ibm-plex-mono)] mb-2">
           {String(index + 1).padStart(2, "0")}
         </div>
         <div className="text-sm md:text-base leading-relaxed text-[var(--foreground)]">{children}</div>

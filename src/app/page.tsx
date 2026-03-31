@@ -387,7 +387,7 @@ export default function Home() {
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
-            background: "radial-gradient(ellipse at center, rgba(192, 57, 43, 0.03) 0%, transparent 60%)",
+            background: "radial-gradient(ellipse at center, rgba(255, 79, 0, 0.05) 0%, transparent 60%)",
           }}
         />
         <div className="relative max-w-3xl mx-auto text-center">

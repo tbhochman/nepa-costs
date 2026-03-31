@@ -60,7 +60,7 @@ export function Hero() {
     >
       {/* Subtle dot pattern */}
       <div className="absolute inset-0 opacity-[0.03]" style={{
-        backgroundImage: "radial-gradient(#6b7280 1px, transparent 1px)",
+        backgroundImage: "radial-gradient(#333 1px, transparent 1px)",
         backgroundSize: "24px 24px",
       }} />
 
@@ -70,11 +70,11 @@ export function Hero() {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="relative z-10 text-center max-w-3xl"
       >
-        <div className="text-[var(--accent)] text-xs font-mono tracking-[0.2em] uppercase mb-8">
+        <div className="text-[var(--accent)] text-xs font-[family-name:var(--font-ibm-plex-sans)] tracking-[0.2em] uppercase mb-8">
           An Interactive Data Story
         </div>
 
-        <h1 className="text-5xl md:text-7xl font-bold tracking-tight leading-[1.05] mb-6 text-[#111827]">
+        <h1 className="text-5xl md:text-7xl font-bold tracking-tight leading-[1.05] mb-6">
           The Cost of{" "}
           <span className="text-[var(--accent)]">NEPA</span>
         </h1>
@@ -92,7 +92,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.9 + i * 0.15, ease: "easeOut" }}
-              className="relative p-6 rounded-xl bg-white border border-[var(--card-border)] shadow-sm overflow-hidden"
+              className="relative p-6 rounded-xl bg-[var(--card-bg)] border border-[var(--card-border)] overflow-hidden"
             >
               <div className="absolute top-0 left-0 right-0 h-[2px] bg-[var(--accent)]" />
               <div className="text-4xl md:text-5xl text-[var(--accent)]">
