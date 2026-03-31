@@ -34,7 +34,7 @@ export function PageCountTimeline({ activeStep }: PageCountTimelineProps) {
     if (!svgRef.current || !containerRef.current) return;
 
     const containerWidth = containerRef.current.clientWidth;
-    const margin = { top: 30, right: 20, bottom: 50, left: 60 };
+    const margin = { top: 30, right: 140, bottom: 50, left: 60 };
     const width = containerWidth;
     const height = Math.min(400, containerWidth * 0.6);
     const innerW = width - margin.left - margin.right;
@@ -89,11 +89,12 @@ export function PageCountTimeline({ activeStep }: PageCountTimelineProps) {
         .attr("opacity", 1);
 
       g.append("text")
-        .attr("x", innerW - 4)
+        .attr("x", 4)
         .attr("y", y(CEQ_MAX) - 8)
-        .attr("text-anchor", "end")
+        .attr("text-anchor", "start")
         .attr("fill", CHART_COLORS.danger)
-        .attr("font-size", 11)
+        .attr("font-size", 12)
+        .attr("font-weight", 500)
         .text("FRA page limit: 150 pages")
         .attr("opacity", 0)
         .transition()
