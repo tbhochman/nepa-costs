@@ -158,26 +158,24 @@ export default function Home() {
           },
           {
             content: (
-              <p>
-                Timelines peaked at <strong>4.7 years in 2017</strong>, then
-                began declining. This may reflect reform efforts, changes in
-                project mix, or agencies prioritizing simpler reviews.
-              </p>
-            ),
-          },
-          {
-            content: (
-              <p>
-                The 2024 median reached <strong>2.2 years</strong>, but{" "}
-                <strong>61% of EISs</strong>{" "}still exceeded the 2-year
-                statutory deadline. And these shorter timelines partly reflect
-                agencies shifting work into a{" "}
-                <strong>pre-NEPA phase</strong>{" "}that doesn&apos;t show up on
-                the clock. BLM now runs a formal pre-NEPA assessment for
-                wind and solar, where projects are reviewed and modified{" "}
-                <em>before</em> the NEPA process officially begins.{" "}
-                <a href="https://www.rff.org/publications/reports/how-long-does-it-take-national-environmental-policy-act-timelines-and-outcomes-for-clean-energy-projects/" target="_blank" rel="noopener noreferrer" className="text-[var(--accent)] hover:underline text-xs">[RFF]</a>
-              </p>
+              <div>
+                <p>
+                  Timelines peaked at <strong>4.7 years in 2017</strong>, then
+                  began declining to <strong>2.2 years</strong>{" "}in 2024. While
+                  this decline may reflect some reform efforts, it is more likely
+                  due to agencies shifting work into a{" "}
+                  <strong>pre-NEPA phase</strong>{" "}that doesn&apos;t show up on
+                  the clock.
+                </p>
+                <p className="mt-3">
+                  BLM now runs a formal pre-NEPA assessment for wind and solar,
+                  where projects are reviewed and modified{" "}
+                  <em>before</em> the NEPA process officially begins. And
+                  nevertheless, <strong>61% of EISs</strong>{" "}still exceeded
+                  the 2-year statutory deadline.{" "}
+                  <a href="https://www.rff.org/publications/reports/how-long-does-it-take-national-environmental-policy-act-timelines-and-outcomes-for-clean-energy-projects/" target="_blank" rel="noopener noreferrer" className="text-[var(--accent)] hover:underline text-xs">[RFF]</a>
+                </p>
+              </div>
             ),
           },
           {
