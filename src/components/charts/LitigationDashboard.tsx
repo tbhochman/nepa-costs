@@ -204,10 +204,6 @@ export function LitigationDashboard({ activeStep }: LitigationDashboardProps) {
               </div>
             ))}
           </div>
-          <div className="mt-3 text-xs text-[var(--muted)]">
-            Yet litigated vs. non-litigated projects had virtually identical
-            time to operation (41.2 vs. 40.9 months)
-          </div>
         </motion.div>
       )}
 
