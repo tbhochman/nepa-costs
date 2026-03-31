@@ -151,7 +151,7 @@ export function EISTimelineChart({ activeStep }: EISTimelineChartProps) {
         .attr("opacity", 1);
     }
 
-    if (activeStep >= 2) {
+    if (activeStep >= 1) {
       // Current year
       const latest = data[data.length - 1];
       g.append("text")

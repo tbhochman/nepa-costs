@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import * as d3 from "d3";
 import { CHART_COLORS, formatCost } from "@/lib/chartUtils";
 
@@ -11,14 +11,6 @@ const reviewTypes = [
   { type: "Complex EIS", cost: 25000000, label: "Major\nProjects" },
 ];
 
-const costHistory = [
-  { year: 2003, cost: 250000 },
-  { year: 2006, cost: 800000 },
-  { year: 2009, cost: 2000000 },
-  { year: 2012, cost: 3500000 },
-  { year: 2016, cost: 7500000 },
-];
-
 interface CostWaterfallProps {
   activeStep: number;
 }
@@ -26,9 +18,6 @@ interface CostWaterfallProps {
 export function CostWaterfall({ activeStep }: CostWaterfallProps) {
   const svgRef = useRef<SVGSVGElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
-  const [hasAnimated, setHasAnimated] = useState(false);
-  const prevStep = useRef(activeStep);
-
   useEffect(() => {
     if (!svgRef.current || !containerRef.current) return;
 
@@ -50,7 +39,7 @@ export function CostWaterfall({ activeStep }: CostWaterfallProps) {
       .append("g")
       .attr("transform", `translate(${margin.left},${margin.top})`);
 
-    if (activeStep <= 1) {
+    {
       // Waterfall view of review types
       const x = d3
         .scaleBand()
@@ -121,130 +110,6 @@ export function CostWaterfall({ activeStep }: CostWaterfallProps) {
           d3
             .axisLeft(y)
             .tickValues([50000, 200000, 1000000, 5000000, 25000000])
-            .tickFormat((d) => formatCost(d as number))
-        )
-        .select(".domain")
-        .remove();
-    } else {
-      // Cost history trend
-      const x = d3
-        .scaleLinear()
-        .domain([2002, 2017])
-        .range([0, innerW]);
-
-      const y = d3
-        .scaleLinear()
-        .domain([0, 8000000])
-        .range([innerH, 0]);
-
-      // Grid
-      g.append("g")
-        .attr("class", "grid")
-        .selectAll("line")
-        .data(y.ticks(4))
-        .join("line")
-        .attr("x1", 0)
-        .attr("x2", innerW)
-        .attr("y1", (d) => y(d))
-        .attr("y2", (d) => y(d));
-
-      // Area
-      const area = d3
-        .area<(typeof costHistory)[0]>()
-        .x((d) => x(d.year))
-        .y0(innerH)
-        .y1((d) => y(d.cost))
-        .curve(d3.curveMonotoneX);
-
-      g.append("path")
-        .datum(costHistory)
-        .attr("fill", `${CHART_COLORS.danger}15`)
-        .attr("d", area);
-
-      // Line
-      const line = d3
-        .line<(typeof costHistory)[0]>()
-        .x((d) => x(d.year))
-        .y((d) => y(d.cost))
-        .curve(d3.curveMonotoneX);
-
-      const path = g
-        .append("path")
-        .datum(costHistory)
-        .attr("fill", "none")
-        .attr("stroke", CHART_COLORS.danger)
-        .attr("stroke-width", 2.5)
-        .attr("d", line);
-
-      const pathLength = path.node()!.getTotalLength();
-      path
-        .attr("stroke-dasharray", pathLength)
-        .attr("stroke-dashoffset", pathLength)
-        .transition()
-        .duration(1200)
-        .attr("stroke-dashoffset", 0);
-
-      // Dots + labels
-      costHistory.forEach((d, i) => {
-        g.append("circle")
-          .attr("cx", x(d.year))
-          .attr("cy", y(d.cost))
-          .attr("r", 0)
-          .attr("fill", CHART_COLORS.danger)
-          .transition()
-          .delay(i * 150 + 400)
-          .duration(300)
-          .attr("r", 5);
-
-        g.append("text")
-          .attr("x", x(d.year))
-          .attr("y", y(d.cost) - 14)
-          .attr("text-anchor", "middle")
-          .attr("fill", CHART_COLORS.foreground)
-          .attr("font-size", 12)
-          .attr("font-weight", 600)
-          .attr("opacity", 0)
-          .text(formatCost(d.cost))
-          .transition()
-          .delay(i * 150 + 500)
-          .duration(300)
-          .attr("opacity", 1);
-      });
-
-      // Multiplier annotation
-      g.append("text")
-        .attr("x", innerW / 2)
-        .attr("y", y(7500000) - 20)
-        .attr("text-anchor", "middle")
-        .attr("fill", CHART_COLORS.danger)
-        .attr("font-size", 16)
-        .attr("font-weight", 700)
-        .attr("opacity", 0)
-        .text("30x increase in 13 years")
-        .transition()
-        .delay(1500)
-        .duration(500)
-        .attr("opacity", 1);
-
-      // Axes
-      g.append("g")
-        .attr("class", "axis")
-        .attr("transform", `translate(0,${innerH})`)
-        .call(
-          d3
-            .axisBottom(x)
-            .ticks(5)
-            .tickFormat((d) => String(d))
-        )
-        .select(".domain")
-        .remove();
-
-      g.append("g")
-        .attr("class", "axis")
-        .call(
-          d3
-            .axisLeft(y)
-            .ticks(4)
             .tickFormat((d) => formatCost(d as number))
         )
         .select(".domain")

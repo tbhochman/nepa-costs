@@ -229,8 +229,7 @@ export default function Home() {
                     By 2016, DOE — the only agency to systematically track
                     contractor costs — reported average EAs at{" "}
                     <strong>$386K</strong>{" "}and average EISs at{" "}
-                    <strong>$7.5M</strong>. CE costs were described as
-                    &ldquo;not significant.&rdquo;{" "}
+                    <strong>$7.5M</strong>.{" "}
                     <a href="https://www.construction-physics.com/p/how-nepa-works" target="_blank" rel="noopener noreferrer" className="text-[var(--accent)] hover:underline text-xs">[Construction Physics]</a>
                   </p>
                 </div>
@@ -242,21 +241,8 @@ export default function Home() {
                   No government-wide cost data exists — the GAO found that
                   agencies do not routinely track the cost of completing NEPA
                   analyses. DOE is essentially the only agency that published
-                  contractor costs, and its portfolio includes some of the most
-                  complex federal projects (nuclear sites, hazardous waste).{" "}
+                  contractor costs.{" "}
                   <a href="https://www.gao.gov/products/gao-14-369" target="_blank" rel="noopener noreferrer" className="text-[var(--accent)] hover:underline text-xs">[GAO-14-369]</a>
-                </p>
-              ),
-            },
-            {
-              content: (
-                <p>
-                  DOE&apos;s EIS costs were relatively steady over time, while
-                  EA costs saw a large recent upward trend — nearly doubling
-                  the Forest Service&apos;s 2007 estimate. The growth in EA
-                  costs is notable because EAs were never part of the original
-                  statute and were meant to be lightweight screening tools.{" "}
-                  <a href="https://www.construction-physics.com/p/how-nepa-works" target="_blank" rel="noopener noreferrer" className="text-[var(--accent)] hover:underline text-xs">[Construction Physics]</a>
                 </p>
               ),
             },
@@ -350,6 +336,53 @@ export default function Home() {
                   challenges.{" "}
                   <a href="https://www.rff.org/publications/reports/taking-green-energy-projects-to-court-nepa-review-and-court-challenges-to-renewable-energy/" target="_blank" rel="noopener noreferrer" className="text-[var(--accent)] hover:underline text-xs">[RFF, 2025]</a>
                 </p>
+              ),
+            },
+            {
+              content: (
+                <div>
+                  <p>
+                    NEPA is the most litigated environmental law. Lawsuits are
+                    sometimes used strategically — not to fix genuine
+                    inadequacies, but to delay projects until proponents give
+                    up. As one activist opposing a missile defense project put
+                    it: the hope is that delay{" "}
+                    <em>&ldquo;will lead to cancellation... That&apos;s what
+                    we always hope for in these suits.&rdquo;</em>
+                  </p>
+                  <p className="mt-3">
+                    A grassroots litigation manual described NEPA as sometimes
+                    &ldquo;the only tool that grassroots groups have&rdquo;{" "}
+                    to fight projects in areas with no other regulatory hook.{" "}
+                    <a href="https://www.construction-physics.com/p/how-nepa-works" target="_blank" rel="noopener noreferrer" className="text-[var(--accent)] hover:underline text-xs">[Construction Physics]</a>
+                  </p>
+                </div>
+              ),
+            },
+            {
+              content: (
+                <div>
+                  <p>
+                    The threat of litigation pushes agencies to produce
+                    &ldquo;bullet-proof&rdquo; documents — one agency testified
+                    that litigation had{" "}
+                    <em>&ldquo;forced them to spend as much as necessary&rdquo;</em>{" "}
+                    to make documents defensible. A Forest Service report found
+                    that team members{" "}
+                    <em>&ldquo;often believe that much of their work is
+                    &apos;for the courts&apos; and not particularly useful for
+                    line officers who make decisions.&rdquo;</em>
+                  </p>
+                  <p className="mt-3">
+                    The result: an estimated{" "}
+                    <strong>90% of EIS content</strong>{" "}is written for
+                    litigation defense, not decision-making. Agencies include
+                    ever more analysis — sometimes citing unpublished,
+                    non-peer-reviewed papers — simply because courts have
+                    penalized agencies for not addressing them.{" "}
+                    <a href="https://www.construction-physics.com/p/how-nepa-works" target="_blank" rel="noopener noreferrer" className="text-[var(--accent)] hover:underline text-xs">[Construction Physics]</a>
+                  </p>
+                </div>
               ),
             },
           ]}
