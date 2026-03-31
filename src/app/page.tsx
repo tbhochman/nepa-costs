@@ -217,12 +217,33 @@ export default function Home() {
           steps={[
             {
               content: (
+                <div>
+                  <p>
+                    NEPA review costs have escalated dramatically. In 2003, CEQ
+                    estimated EISs cost <strong>$250K–$2M</strong>. By 2007,
+                    the Forest Service reported CEs cost ~<strong>$50K</strong>,
+                    EAs ~<strong>$200K</strong>, and EISs ~<strong>$1M</strong>{" "}
+                    on average.
+                  </p>
+                  <p className="mt-3">
+                    By 2016, DOE — the only agency to systematically track
+                    contractor costs — reported average EAs at{" "}
+                    <strong>$386K</strong>{" "}and average EISs at{" "}
+                    <strong>$7.5M</strong>. CE costs were described as
+                    &ldquo;not significant.&rdquo;{" "}
+                    <a href="https://www.construction-physics.com/p/how-nepa-works" target="_blank" rel="noopener noreferrer" className="text-[var(--accent)] hover:underline text-xs">[Construction Physics]</a>
+                  </p>
+                </div>
+              ),
+            },
+            {
+              content: (
                 <p>
-                  NEPA review costs span three orders of magnitude. A Categorical
-                  Exclusion costs ~<strong>$50K</strong>, an EA ~
-                  <strong>$200K</strong>, a typical EIS ~<strong>$6M</strong>,
-                  and complex EIS for major projects can reach{" "}
-                  <strong>$25M+</strong>.{" "}
+                  No government-wide cost data exists — the GAO found that
+                  agencies do not routinely track the cost of completing NEPA
+                  analyses. DOE is essentially the only agency that published
+                  contractor costs, and its portfolio includes some of the most
+                  complex federal projects (nuclear sites, hazardous waste).{" "}
                   <a href="https://www.gao.gov/products/gao-14-369" target="_blank" rel="noopener noreferrer" className="text-[var(--accent)] hover:underline text-xs">[GAO-14-369]</a>
                 </p>
               ),
@@ -230,21 +251,11 @@ export default function Home() {
             {
               content: (
                 <p>
-                  The cost of a single review is only part of the picture. EIS
-                  costs also vary by agency and project complexity. DOE&apos;s
-                  average EIS costs <strong>$6 million</strong> — the
-                  government-wide average is likely higher.{" "}
-                  <a href="https://www.energy.gov/nepa/nepa-documents" target="_blank" rel="noopener noreferrer" className="text-[var(--accent)] hover:underline text-xs">[DOE]</a>
-                </p>
-              ),
-            },
-            {
-              content: (
-                <p>
-                  DOE EIS costs have escalated from <strong>$250K in 2003</strong>{" "}
-                  to <strong>$7.5M by 2016</strong> — a{" "}
-                  <strong>30x increase in 13 years</strong>. This growth tracks
-                  with the expansion in document length and analytical scope.{" "}
+                  DOE&apos;s EIS costs were relatively steady over time, while
+                  EA costs saw a large recent upward trend — nearly doubling
+                  the Forest Service&apos;s 2007 estimate. The growth in EA
+                  costs is notable because EAs were never part of the original
+                  statute and were meant to be lightweight screening tools.{" "}
                   <a href="https://www.construction-physics.com/p/how-nepa-works" target="_blank" rel="noopener noreferrer" className="text-[var(--accent)] hover:underline text-xs">[Construction Physics]</a>
                 </p>
               ),
@@ -317,13 +328,17 @@ export default function Home() {
             },
             {
               content: (
-                <p>
-                  Agencies win <strong>~80% of the time</strong>{" "}on appeal — but
-                  winning still takes an average of{" "}
-                  <strong>4.2 years</strong>{" "}from EIS publication to resolution.
-                  The process itself is the punishment.{" "}
-                  <a href="https://thebreakthrough.org/issues/energy/understanding-nepa-litigation" target="_blank" rel="noopener noreferrer" className="text-[var(--accent)] hover:underline text-xs">[Breakthrough]</a>
-                </p>
+                <div>
+                  <p>
+                    Across all courts, agencies prevail in roughly{" "}
+                    <strong>74%</strong>{" "}of cases — and{" "}
+                    <strong>~80%</strong>{" "}on appeal. But winning still takes
+                    a median of <strong>19 months</strong>{" "}in litigation, and{" "}
+                    <strong>4.2 years</strong>{" "}from EIS publication to
+                    appellate resolution. The process itself is the punishment.{" "}
+                    <a href="https://thebreakthrough.org/issues/energy/the-procedural-hangover" target="_blank" rel="noopener noreferrer" className="text-[var(--accent)] hover:underline text-xs">[Breakthrough]</a>
+                  </p>
+                </div>
               ),
             },
             {
@@ -332,8 +347,7 @@ export default function Home() {
                   For clean energy specifically, EIS litigation rates are high:{" "}
                   <strong>50% of wind EIS</strong> and{" "}
                   <strong>37.5% of solar EIS</strong>{" "}projects face court
-                  challenges. Yet paradoxically, litigated and non-litigated
-                  projects have nearly identical timelines to operation.{" "}
+                  challenges.{" "}
                   <a href="https://www.rff.org/publications/reports/taking-green-energy-projects-to-court-nepa-review-and-court-challenges-to-renewable-energy/" target="_blank" rel="noopener noreferrer" className="text-[var(--accent)] hover:underline text-xs">[RFF, 2025]</a>
                 </p>
               ),
