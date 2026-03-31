@@ -339,12 +339,6 @@ export default function Home() {
                     <em>&ldquo;will lead to cancellation... That&apos;s what
                     we always hope for in these suits.&rdquo;</em>
                   </p>
-                  <p className="mt-3">
-                    A grassroots litigation manual described NEPA as sometimes
-                    &ldquo;the only tool that grassroots groups have&rdquo;{" "}
-                    to fight projects in areas with no other regulatory hook.{" "}
-                    <a href="https://www.construction-physics.com/p/how-nepa-works" target="_blank" rel="noopener noreferrer" className="text-[var(--accent)] hover:underline text-xs">[Construction Physics]</a>
-                  </p>
                 </div>
               ),
             },
