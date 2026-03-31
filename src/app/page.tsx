@@ -33,7 +33,7 @@ export default function Home() {
                 <p>
                   The most rigorous review. Only ~100 are completed per year, but
                   each averages <strong>4.5 years</strong>{" "}and costs around{" "}
-                  <strong>$6 million</strong>. Complex EIS can cost tens of
+                  <strong>$6 million</strong>. Complex EISs can cost tens of
                   millions.
                 </p>
               </div>
