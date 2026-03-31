@@ -306,40 +306,6 @@ export default function ExplorePage() {
           </div>
         </div>
 
-        {/* Clean Energy Paradox callout */}
-        <div className="mt-16 p-6 rounded-2xl bg-[var(--accent)]/5 border border-[var(--accent)]/20">
-          <h3 className="text-lg font-bold mb-2">The Clean Energy Paradox</h3>
-          <p className="text-sm text-[var(--muted)] mb-4">
-            Clean energy projects face disproportionate NEPA burden compared to
-            fossil fuel projects.
-          </p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <div className="text-center">
-              <div className="text-2xl font-bold text-[var(--accent)]">62%</div>
-              <div className="text-xs text-[var(--muted)]">
-                of energy EIS are clean energy
-              </div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-[var(--muted)]">16%</div>
-              <div className="text-xs text-[var(--muted)]">
-                of energy EIS are fossil fuels
-              </div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-[var(--accent)]">10%</div>
-              <div className="text-xs text-[var(--muted)]">
-                of solar growth goes through NEPA
-              </div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-[var(--accent)]">3.7%</div>
-              <div className="text-xs text-[var(--muted)]">
-                of wind growth goes through NEPA
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   );
