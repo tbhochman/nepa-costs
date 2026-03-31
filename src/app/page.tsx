@@ -270,17 +270,6 @@ export default function Home() {
           {
             content: (
               <p>
-                Offshore wind illustrates the bottleneck:{" "}
-                <strong>42 MW operational</strong> vs.{" "}
-                <strong>18,581 MW stuck in permitting</strong>. The capacity
-                waiting in the queue is 442x what&apos;s already built.{" "}
-                <a href="https://www.energy.gov/nepa/nepa-documents" target="_blank" rel="noopener noreferrer" className="text-[var(--accent)] hover:underline text-xs">[DOE]</a>
-              </p>
-            ),
-          },
-          {
-            content: (
-              <p>
                 A single geothermal project can require{" "}
                 <strong>6 separate NEPA reviews</strong> — one for each phase from
                 land access through construction. Each review restarts the clock

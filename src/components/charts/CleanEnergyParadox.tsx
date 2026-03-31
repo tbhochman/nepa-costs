@@ -48,63 +48,8 @@ export function CleanEnergyParadox({ activeStep }: CleanEnergyParadoxProps) {
         </motion.div>
       )}
 
-      {/* Step 1: Offshore wind */}
+      {/* Step 1: Geothermal reviews */}
       {activeStep >= 1 && (
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          <div className="text-sm text-[var(--muted)] mb-3">
-            Offshore Wind Status (MW)
-          </div>
-          <div className="space-y-2">
-            {[
-              {
-                label: "Operational",
-                value: 42,
-                max: 19555,
-                color: "var(--success)",
-              },
-              {
-                label: "Under Construction",
-                value: 932,
-                max: 19555,
-                color: "var(--accent)",
-              },
-              {
-                label: "Stuck in Permitting",
-                value: 18581,
-                max: 19555,
-                color: "var(--danger)",
-              },
-            ].map((item) => (
-              <div key={item.label}>
-                <div className="flex justify-between text-sm mb-1">
-                  <span>{item.label}</span>
-                  <span className="font-semibold" style={{ color: item.color }}>
-                    {item.value.toLocaleString()} MW
-                  </span>
-                </div>
-                <div className="h-3 bg-[var(--card-border)] rounded-full overflow-hidden">
-                  <motion.div
-                    initial={{ width: 0 }}
-                    animate={{
-                      width: `${(item.value / item.max) * 100}%`,
-                    }}
-                    transition={{ duration: 0.8, delay: 0.2 }}
-                    className="h-full rounded-full"
-                    style={{ backgroundColor: item.color }}
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
-        </motion.div>
-      )}
-
-      {/* Step 2: Geothermal reviews */}
-      {activeStep >= 2 && (
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
