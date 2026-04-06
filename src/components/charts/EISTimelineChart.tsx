@@ -74,7 +74,7 @@ export function EISTimelineChart({ activeStep }: EISTimelineChartProps) {
       .attr("y", y(2) - 8)
       .attr("fill", CHART_COLORS.success)
       .attr("font-size", 11)
-      .text("FRA 2-year target");
+      .text("2-year benchmark / statutory deadline (FRA 2023)");
 
     // Area fill
     const area = d3

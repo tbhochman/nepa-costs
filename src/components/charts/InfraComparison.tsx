@@ -83,8 +83,8 @@ export function InfraComparison({ activeStep }: InfraComparisonProps) {
         <svg ref={svgRef} />
       </div>
 
-      {/* Highway cost and international comparison */}
-      {activeStep >= 1 && (
+      {/* Highway cost and international comparison - suggestive context */}
+      {activeStep >= 2 && (
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
@@ -93,10 +93,10 @@ export function InfraComparison({ activeStep }: InfraComparisonProps) {
           <div className="p-4 rounded-xl bg-[var(--danger)]/5 border border-[var(--danger)]/20">
             <div className="text-2xl font-bold text-[var(--danger)]">3x</div>
             <div className="text-sm text-[var(--muted)] mt-1">
-              Highway cost per mile increase (1960s → 1980s)
+              Highway cost per mile increase (1960s→1980s, real dollars)
             </div>
             <div className="text-xs text-[var(--muted)] mt-2 opacity-60">
-              Liscow & Brooks
+              Liscow &amp; Brooks — suggestive correlation
             </div>
           </div>
           <div className="p-4 rounded-xl bg-[var(--accent)]/5 border border-[var(--accent)]/20">
@@ -105,14 +105,14 @@ export function InfraComparison({ activeStep }: InfraComparisonProps) {
               Longer than peer nations for permitting
             </div>
             <div className="text-xs text-[var(--muted)] mt-2 opacity-60">
-              NAM/FAI Survey
+              NAM/FAI Survey — international comparison
             </div>
           </div>
         </motion.div>
       )}
 
       {/* Sector cancellation rates */}
-      {activeStep >= 2 && (
+      {activeStep >= 1 && (
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}

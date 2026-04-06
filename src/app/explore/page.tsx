@@ -98,7 +98,7 @@ function SectorCard({ sector, onClick, isSelected }: { sector: Sector; onClick: 
             <div className="text-lg font-bold" style={{ color }}>
               {String(metrics.avgEISMonths)}mo
             </div>
-            <div className="text-[10px] text-[var(--muted)]">EIS avg</div>
+            <div className="text-[10px] text-[var(--muted)]">formal EIS review</div>
           </div>
         )}
         {metrics.avgTimelineYears && (
@@ -106,7 +106,7 @@ function SectorCard({ sector, onClick, isSelected }: { sector: Sector; onClick: 
             <div className="text-lg font-bold" style={{ color }}>
               {String(metrics.avgTimelineYears)}yr
             </div>
-            <div className="text-[10px] text-[var(--muted)]">avg timeline</div>
+            <div className="text-[10px] text-[var(--muted)]">end-to-end project</div>
           </div>
         )}
         {metrics.litigationRateEIS && (
@@ -180,11 +180,11 @@ function SectorDetail({ sector }: { sector: Sector }) {
       <div className="space-y-0">
         <MetricRow label="EIS projects analyzed" value={metrics.eisProjects as string} />
         <MetricRow label="EA projects analyzed" value={metrics.eaProjects as string} />
-        <MetricRow label="Avg EIS timeline" value={metrics.avgEISMonths ? `${metrics.avgEISMonths} months` : (metrics.avgEISYears ? `${metrics.avgEISYears} years` : null)} />
-        <MetricRow label="Avg EA timeline" value={metrics.avgEAMonths ? `${metrics.avgEAMonths} months` : null} />
+        <MetricRow label="Avg formal EIS review" value={metrics.avgEISMonths ? `${metrics.avgEISMonths} months (NOI→ROD)` : (metrics.avgEISYears ? `${metrics.avgEISYears} years (NOI→ROD)` : null)} />
+        <MetricRow label="Avg formal EA review" value={metrics.avgEAMonths ? `${metrics.avgEAMonths} months` : null} />
         <MetricRow label="Meets 2-year target" value={metrics.meetsTwoYearTarget ? `${metrics.meetsTwoYearTarget}%` : null} />
         <MetricRow label="EA meets 1-year target" value={metrics.eaMeetsOneYear ? `${metrics.eaMeetsOneYear}%` : null} />
-        <MetricRow label="Avg overall timeline" value={metrics.avgTimelineYears ? `${metrics.avgTimelineYears} years` : null} />
+        <MetricRow label="Avg end-to-end project timeline" value={metrics.avgTimelineYears ? `${metrics.avgTimelineYears} years` : null} />
         <MetricRow label="Time waiting for approval" value={metrics.timeWaitingForApproval ? `${metrics.timeWaitingForApproval}%` : null} />
         <MetricRow label="EIS litigation rate" value={metrics.litigationRateEIS ? `${metrics.litigationRateEIS}%` : (metrics.litigationRate ? `${metrics.litigationRate}%` : null)} />
         <MetricRow label="EA litigation rate" value={metrics.litigationRateEA ? `${metrics.litigationRateEA}%` : null} />
@@ -192,8 +192,6 @@ function SectorDetail({ sector }: { sector: Sector }) {
         <MetricRow label="Share of all EIS" value={metrics.shareOfEIS ? `${metrics.shareOfEIS}%` : null} />
         <MetricRow label="Share of all litigation" value={metrics.shareOfLitigation ? `${metrics.shareOfLitigation}%` : null} />
         <MetricRow label="Agency win rate" value={metrics.agencyWinRate ? `${metrics.agencyWinRate}%` : null} />
-        <MetricRow label="Capacity added" value={metrics.capacityAdded as string} />
-        <MetricRow label="Share of national capacity growth" value={metrics.capacityShare ? `${metrics.capacityShare}%` : null} />
         <MetricRow label="Projects analyzed" value={metrics.projectsAnalyzed as string} />
         <MetricRow label="Paperwork duration" value={metrics.paperworkYears ? `${metrics.paperworkYears} years` : null} />
         <MetricRow label="Multiple reviews required" value={metrics.multipleReviews ? `Up to ${metrics.multipleReviews}` : null} />

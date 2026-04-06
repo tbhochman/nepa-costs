@@ -138,7 +138,7 @@ export function LitigationDashboard({ activeStep }: LitigationDashboardProps) {
           {[
             {
               value: `${litigationData.breakthrough.agencyWinRate}%`,
-              label: "Agency win rate",
+              label: "Agency win rate (all courts)",
               color: CHART_COLORS.success,
             },
             {

@@ -31,10 +31,16 @@ export default function Home() {
                   Environmental Impact Statements (EIS)
                 </p>
                 <p>
-                  The most rigorous review. Only ~100 are completed per year, but
-                  each averages <strong>4.5 years</strong>{" "}and costs around{" "}
-                  <strong>$6 million</strong>. Complex EISs can cost tens of
-                  millions.
+                  The most rigorous review. Only ~100 are completed per year.
+                  EIS timelines have ranged from{" "}
+                  <strong>2.2 to 4.7 years</strong>{" "}
+                  <span className="text-xs text-[var(--muted)]">(median NOI→final EIS, 2010–2024, CEQ)</span>.
+                  Costs range from{" "}
+                  <strong>$250K–$2M</strong>{" "}
+                  <span className="text-xs text-[var(--muted)]">(CEQ estimate, 2003)</span>{" "}
+                  to <strong>$7.5M avg</strong>{" "}
+                  <span className="text-xs text-[var(--muted)]">(DOE contractor costs, 2016)</span>.
+                  Complex EISs can cost tens of millions.
                 </p>
               </div>
             ),
@@ -46,8 +52,10 @@ export default function Home() {
                   Environmental Assessments (EA)
                 </p>
                 <p>
-                  The middle tier. About <strong>10,000 per year</strong>, costing
-                  ~$200K each and taking 1-2 years.
+                  The middle tier. About <strong>10,000 per year</strong>.
+                  EAs often cost hundreds of thousands of dollars{" "}
+                  <span className="text-xs text-[var(--muted)]">(~$200K avg, USFS 2007; ~$386K avg, DOE 2016)</span>{" "}
+                  and typically take 1–2 years.
                 </p>
                 <p className="mt-2">
                   EAs were never described in the original law — they started as
@@ -83,7 +91,8 @@ export default function Home() {
                 <p className="font-semibold mb-2">The Total Cost</p>
                 <p>
                   Across all three tiers, federal agencies spend an estimated{" "}
-                  <strong>$1-5 billion annually</strong>{" "}on NEPA compliance —
+                  <strong>$1–5 billion annually</strong>{" "}
+                  <span className="text-xs text-[var(--muted)]">(IFP estimate)</span>{" "}on NEPA compliance —
                   though the GAO has noted that agencies do not systematically
                   track these costs.{" "}
                   <a href="https://ifp.org/environmental-review/" target="_blank" rel="noopener noreferrer" className="text-[var(--accent)] hover:underline text-xs">[IFP]</a>{" "}
@@ -101,7 +110,7 @@ export default function Home() {
         <ScrollSection
           id="paperwork"
           title="The Growing Paperwork"
-          subtitle={<>EIS documents have grown from a few dozen pages to over 1,700. <a href="https://ceq.doe.gov/nepa-practice/eis-length.html" target="_blank" rel="noopener noreferrer" className="text-[var(--accent)] hover:underline text-xs">[CEQ]</a></>}
+          subtitle={<>EIS documents have grown from a few dozen pages to <strong>1,703 pages</strong> including appendices <span className="text-xs text-[var(--muted)]">(2013–2018 avg, CEQ)</span>. Main body: 661 pages. <a href="https://ceq.doe.gov/nepa-practice/eis-length.html" target="_blank" rel="noopener noreferrer" className="text-[var(--accent)] hover:underline text-xs">[CEQ]</a></>}
           reverse
           steps={[
             {
@@ -109,17 +118,20 @@ export default function Home() {
                 <p>
                   In the 1970s, an EIS was typically <strong>30 pages</strong>.
                   NEPA&apos;s original intent was concise environmental analysis.
-                  CEQ guidelines recommend a <strong>150-page maximum</strong>.
+                  The current FRA/CEQ page limit for EIS main text is{" "}
+                  <strong>150 pages</strong>{" "}(300 for extraordinary complexity).
+                  Appendices are excluded from the limit.
                 </p>
               ),
             },
             {
               content: (
                 <p>
-                  By 2013-2018, the average EIS had grown to{" "}
-                  <strong>661 pages</strong>{" "}of main body text — over{" "}
-                  <strong>4x the statutory limit</strong>. The FRA page limit
-                  is shown in red.
+                  By 2013–2018, the average EIS main body had grown to{" "}
+                  <strong>661 pages</strong>{" "}
+                  <span className="text-xs text-[var(--muted)]">(final EIS main text, 2013–2018 avg, CEQ)</span>
+                  {" "}— over <strong>4x the FRA page limit</strong>. The red
+                  line shows the 150-page limit for main text.
                 </p>
               ),
             },
@@ -127,12 +139,11 @@ export default function Home() {
               content: (
                 <p>
                   Including appendices, the total reaches{" "}
-                  <strong>1,703 pages</strong>{" "}on average. Although the Fiscal
-                  Responsibility Act imposed page limits on the main body of
-                  EIS documents, agencies use appendices — which don&apos;t
-                  count toward the limit — to work around the cap. The
-                  appendices alone (1,042 pages) are 7x longer than the
-                  recommended total.
+                  <strong>1,703 pages</strong>{" "}
+                  <span className="text-xs text-[var(--muted)]">(2013–2018 avg, CEQ)</span>.
+                  Agencies use appendices — which don&apos;t count toward
+                  the FRA limit — to work around the cap. The appendices
+                  alone (1,042 pages) are 7x longer than the main-text limit.
                 </p>
               ),
             },
@@ -145,34 +156,43 @@ export default function Home() {
       <ScrollSection
         id="timelines"
         title="How Long Does It Take?"
-        subtitle={<>EIS completion times peaked in 2017, then began improving — but most still miss the deadline. <a href="https://ceq.doe.gov/nepa-practice/eis-timelines.html" target="_blank" rel="noopener noreferrer" className="text-[var(--accent)] hover:underline text-xs">[CEQ]</a></>}
+        subtitle={<>Formal EIS review time fell — but total project delay did not necessarily fall. <a href="https://ceq.doe.gov/nepa-practice/eis-timelines.html" target="_blank" rel="noopener noreferrer" className="text-[var(--accent)] hover:underline text-xs">[CEQ]</a></>}
         steps={[
           {
             content: (
-              <p>
-                From 2010 to 2024, the median EIS completion time ranged from{" "}
-                <strong>2.2 to 4.7 years</strong>. The green line shows the
-                2-year target set by the FAST-41 and Fiscal Responsibility Act.
-              </p>
+              <div>
+                <div className="text-xs text-[var(--muted)] mb-3 p-2 rounded bg-[var(--section-alt)] border border-[var(--card-border)]">
+                  Chart measures formal EIS review only (NOI→final EIS). Excludes pre-application and post-approval delay.
+                </div>
+                <p>
+                  From 2010 to 2024, the median EIS completion time{" "}
+                  <span className="text-xs text-[var(--muted)]">(NOI→final EIS)</span>{" "}
+                  ranged from <strong>2.2 to 4.7 years</strong>. The green line
+                  shows the 2-year benchmark{" "}
+                  <span className="text-xs text-[var(--muted)]">(statutory deadline under FRA, 2023)</span>.
+                </p>
+              </div>
             ),
           },
           {
             content: (
               <div>
                 <p>
-                  Timelines peaked at <strong>4.7 years in 2017</strong>, then
-                  began declining to <strong>2.2 years</strong>{" "}in 2024. While
-                  this decline may reflect some reform efforts, it is more likely
-                  due to agencies shifting work into a{" "}
-                  <strong>pre-NEPA phase</strong>{" "}that doesn&apos;t show up on
-                  the clock.
+                  Formal EIS time peaked at <strong>4.7 years</strong>{" "}
+                  <span className="text-xs text-[var(--muted)]">(median NOI→ROD, 2017, CEQ)</span>{" "}
+                  and fell to <strong>2.2 years</strong>{" "}
+                  <span className="text-xs text-[var(--muted)]">(median NOI→final EIS, 2024, CEQ)</span>.
+                  But much of this decline reflects agencies shifting work into
+                  a <strong>pre-NEPA phase</strong> that doesn&apos;t appear on
+                  the clock, not a reduction in total project delay.
                 </p>
                 <p className="mt-3">
                   BLM now runs a formal pre-NEPA assessment for wind and solar,
                   where projects are reviewed and modified{" "}
                   <em>before</em> the NEPA process officially begins. And
-                  nevertheless, <strong>61% of EISs</strong>{" "}still exceeded
-                  the 2-year statutory deadline.{" "}
+                  nevertheless, <strong>61% of EISs</strong>{" "}
+                  <span className="text-xs text-[var(--muted)]">(RFF, 2025)</span>{" "}
+                  still exceeded the 2-year deadline.{" "}
                   <a href="https://www.rff.org/publications/reports/how-long-does-it-take-national-environmental-policy-act-timelines-and-outcomes-for-clean-energy-projects/" target="_blank" rel="noopener noreferrer" className="text-[var(--accent)] hover:underline text-xs">[RFF]</a>
                 </p>
               </div>
@@ -181,7 +201,8 @@ export default function Home() {
           {
             content: (
               <p>
-                RFF found that <strong>12 of 21 solar projects</strong>{" "}took
+                RFF found that <strong>12 of 21 solar projects</strong>{" "}
+                <span className="text-xs text-[var(--muted)]">(RFF, 2025)</span>{" "}took
                 over 2 years just from initial application to the Notice of
                 Intent that starts the formal NEPA clock. For wind,{" "}
                 <strong>9 of 14 projects</strong>{" "}took 2+ years before formal
@@ -196,9 +217,10 @@ export default function Home() {
             content: (
               <p>
                 Timelines vary dramatically by agency. FHWA averages{" "}
-                <strong>6.2 years</strong>, while DOE completes reviews in
-                ~3.5 years. The Forest Service and BLM, which produce the most
-                EISs, fall in between.{" "}
+                <strong>6.2 years</strong>{" "}
+                <span className="text-xs text-[var(--muted)]">(mean NOI→ROD, 2010–2018, CEQ)</span>,
+                while DOE completes reviews in ~3.5 years. The Forest Service
+                and BLM, which produce the most EISs, fall in between.{" "}
                 <a href="https://ceq.doe.gov/nepa-practice/eis-timelines.html" target="_blank" rel="noopener noreferrer" className="text-[var(--accent)] hover:underline text-xs">[CEQ, 2025]</a>
               </p>
             ),
@@ -219,17 +241,23 @@ export default function Home() {
               content: (
                 <div>
                   <p>
-                    NEPA review costs have escalated dramatically. In 2003, CEQ
-                    estimated EISs cost <strong>$250K–$2M</strong>. By 2007,
-                    the Forest Service reported CEs cost ~<strong>$50K</strong>,
-                    EAs ~<strong>$200K</strong>, and EISs ~<strong>$1M</strong>{" "}
-                    on average.
+                    NEPA review costs have escalated dramatically across
+                    available estimates:
                   </p>
-                  <p className="mt-3">
-                    By 2016, DOE — the only agency to systematically track
-                    contractor costs — reported average EAs at{" "}
-                    <strong>$386K</strong>{" "}and average EISs at{" "}
-                    <strong>$7.5M</strong>.{" "}
+                  <ul className="mt-2 space-y-1 text-sm">
+                    <li><strong>$250K–$2M</strong>{" "}
+                      <span className="text-xs text-[var(--muted)]">(CEQ EIS estimate, 2003)</span>
+                    </li>
+                    <li>CEs ~<strong>$50K</strong>, EAs ~<strong>$200K</strong>, EISs ~<strong>$1M</strong>{" "}
+                      <span className="text-xs text-[var(--muted)]">(USFS avg, 2007)</span>
+                    </li>
+                    <li>EAs <strong>$386K</strong>, EISs <strong>$7.5M</strong>{" "}
+                      <span className="text-xs text-[var(--muted)]">(DOE contractor costs, 2016)</span>
+                    </li>
+                  </ul>
+                  <p className="mt-2 text-xs text-[var(--muted)]">
+                    The DOE figure is much higher partly because DOE is the only
+                    agency that systematically tracks contractor costs.{" "}
                     <a href="https://www.construction-physics.com/p/how-nepa-works" target="_blank" rel="noopener noreferrer" className="text-[var(--accent)] hover:underline text-xs">[Construction Physics]</a>
                   </p>
                 </div>
@@ -240,8 +268,10 @@ export default function Home() {
                 <p>
                   No government-wide cost data exists — the GAO found that
                   agencies do not routinely track the cost of completing NEPA
-                  analyses. DOE is essentially the only agency that published
-                  contractor costs.{" "}
+                  analyses{" "}
+                  <span className="text-xs text-[var(--muted)]">(GAO-14-369, 2014)</span>.
+                  DOE is essentially the only agency that published contractor
+                  costs.{" "}
                   <a href="https://www.gao.gov/products/gao-14-369" target="_blank" rel="noopener noreferrer" className="text-[var(--accent)] hover:underline text-xs">[GAO-14-369]</a>
                 </p>
               ),
@@ -260,7 +290,8 @@ export default function Home() {
           {
             content: (
               <p>
-                <strong>62% of energy-related EIS reviews</strong>{" "}are for clean
+                <strong>62% of energy-related EIS reviews</strong>{" "}
+                <span className="text-xs text-[var(--muted)]">(IFP analysis)</span>{" "}are for clean
                 energy projects — solar, wind, transmission, and geothermal. Only
                 16% are for fossil fuel projects.{" "}
                 <a href="https://ifp.org/how-nepa-will-tax-clean-energy/" target="_blank" rel="noopener noreferrer" className="text-[var(--accent)] hover:underline text-xs">[IFP]</a>
@@ -294,9 +325,11 @@ export default function Home() {
               content: (
                 <p>
                   Public lands and forestry face the most NEPA litigation (
-                  <strong>37%</strong>{" "}of all cases), followed by energy projects (
-                  <strong>29%</strong>). 72% of cases are filed by NGOs, with the
-                  top 10 organizations responsible for 35% of all challenges.{" "}
+                  <strong>37%</strong>{" "}of all appellate cases), followed by
+                  energy projects (<strong>29%</strong>). 72% of cases are filed
+                  by NGOs, with the top 10 organizations responsible for 35% of
+                  all challenges.{" "}
+                  <span className="text-xs text-[var(--muted)]">(387 appellate cases, 2013–2022, Breakthrough)</span>{" "}
                   <a href="https://thebreakthrough.org/issues/energy/understanding-nepa-litigation" target="_blank" rel="noopener noreferrer" className="text-[var(--accent)] hover:underline text-xs">[Breakthrough, 2024]</a>
                 </p>
               ),
@@ -305,12 +338,16 @@ export default function Home() {
               content: (
                 <div>
                   <p>
-                    Across all courts, agencies prevail in roughly{" "}
-                    <strong>74%</strong>{" "}of cases — and{" "}
-                    <strong>~80%</strong>{" "}on appeal. But winning still takes
-                    a median of <strong>19 months</strong>{" "}in litigation, and{" "}
+                    Overall agency win rate:{" "}
+                    <strong>74%</strong>{" "}
+                    <span className="text-xs text-[var(--muted)]">(all courts, 2013–2022, Breakthrough)</span>.
+                    On appeal specifically, agencies win ~<strong>80%</strong>.
+                    But winning still takes a median of{" "}
+                    <strong>19 months</strong>{" "}in litigation, and{" "}
                     <strong>4.2 years</strong>{" "}from EIS publication to
-                    appellate resolution. The process itself is the punishment.{" "}
+                    appellate resolution{" "}
+                    <span className="text-xs text-[var(--muted)]">(appeals only)</span>.
+                    The process itself is the punishment.{" "}
                     <a href="https://thebreakthrough.org/issues/energy/the-procedural-hangover" target="_blank" rel="noopener noreferrer" className="text-[var(--accent)] hover:underline text-xs">[Breakthrough]</a>
                   </p>
                 </div>
@@ -322,7 +359,8 @@ export default function Home() {
                   For clean energy specifically, EIS litigation rates are high:{" "}
                   <strong>50% of wind EIS</strong> and{" "}
                   <strong>37.5% of solar EIS</strong>{" "}projects face court
-                  challenges.{" "}
+                  challenges{" "}
+                  <span className="text-xs text-[var(--muted)]">(RFF, 2025)</span>.{" "}
                   <a href="https://www.rff.org/publications/reports/taking-green-energy-projects-to-court-nepa-review-and-court-challenges-to-renewable-energy/" target="_blank" rel="noopener noreferrer" className="text-[var(--accent)] hover:underline text-xs">[RFF, 2025]</a>
                 </p>
               ),
@@ -377,42 +415,55 @@ export default function Home() {
       <ScrollSection
         id="infrastructure"
         title="The Infrastructure Impact"
-        subtitle="355 major projects, international comparisons, and the bottom line."
+        subtitle="Direct evidence from 355 major projects, plus suggestive historical patterns."
         steps={[
           {
             content: (
-              <p>
-                Of <strong>355 major infrastructure projects</strong>{" "}tracked
-                from 2010-2018, fewer than half were completed by 2022.{" "}
-                <strong>14% were cancelled</strong>{" "}and 40% remained in progress.
-                28% faced predevelopment litigation, and 89% of those cases
-                involved NEPA claims.{" "}
-                <a href="https://cddrl.fsi.stanford.edu/publication/nepa-litigation-over-large-energy-and-transport-infrastructure-projects" target="_blank" rel="noopener noreferrer" className="text-[var(--accent)] hover:underline text-xs">[Bennon & Wilson, 2023]</a>
-              </p>
+              <div>
+                <p className="font-semibold mb-2 text-sm text-[var(--accent)]">Direct evidence</p>
+                <p>
+                  Of <strong>355 major infrastructure projects</strong>{" "}
+                  <span className="text-xs text-[var(--muted)]">(energy + transport, 2010–2018, Bennon &amp; Wilson 2023)</span>,
+                  fewer than half were completed by 2022.{" "}
+                  <strong>14% were cancelled</strong>{" "}and 40% remained in progress.
+                  28% faced predevelopment litigation, and 89% of those cases
+                  involved NEPA claims.{" "}
+                  <a href="https://cddrl.fsi.stanford.edu/publication/nepa-litigation-over-large-energy-and-transport-infrastructure-projects" target="_blank" rel="noopener noreferrer" className="text-[var(--accent)] hover:underline text-xs">[Bennon &amp; Wilson, 2023]</a>
+                </p>
+              </div>
             ),
           },
           {
             content: (
               <p>
-                Interstate highway spending per mile{" "}
-                <strong>tripled from the 1960s to the 1980s</strong> — a pattern
-                that emerged after NEPA&apos;s passage. The U.S. takes{" "}
-                <strong>80% longer</strong>{" "}than peer nations for permitting.
-                (Note: the highway cost increase is a correlation, not proven
-                causation.){" "}
-                <a href="https://law.yale.edu/yls-today/news/zachary-liscow-and-leah-brooks-cost-highway-construction" target="_blank" rel="noopener noreferrer" className="text-[var(--accent)] hover:underline text-xs">[Liscow & Brooks]</a>
+                Cancellation rates vary sharply by sector{" "}
+                <span className="text-xs text-[var(--muted)]">(Bennon &amp; Wilson, 2023)</span>.
+                Solar (<strong>32%</strong>) and wind (<strong>31%</strong>)
+                projects are cancelled at roughly double the rate of
+                transmission (<strong>12%</strong>). Energy projects face
+                shorter permits but higher litigation and cancellation rates.{" "}
+                <a href="https://cddrl.fsi.stanford.edu/publication/nepa-litigation-over-large-energy-and-transport-infrastructure-projects" target="_blank" rel="noopener noreferrer" className="text-[var(--accent)] hover:underline text-xs">[Bennon &amp; Wilson]</a>
               </p>
             ),
           },
           {
             content: (
-              <p>
-                Cancellation rates vary sharply by sector. Solar (32%) and wind
-                (31%) projects are cancelled at roughly double the rate of
-                transmission (12%). Energy projects face shorter permits but
-                higher litigation and cancellation rates.{" "}
-                <a href="https://cddrl.fsi.stanford.edu/publication/nepa-litigation-over-large-energy-and-transport-infrastructure-projects" target="_blank" rel="noopener noreferrer" className="text-[var(--accent)] hover:underline text-xs">[Bennon & Wilson]</a>
-              </p>
+              <div>
+                <p className="font-semibold mb-2 text-sm text-[var(--accent)]">Suggestive historical correlation</p>
+                <p>
+                  Interstate highway spending per mile{" "}
+                  <strong>tripled from the 1960s to the 1980s</strong>{" "}
+                  <span className="text-xs text-[var(--muted)]">(real dollars, Liscow &amp; Brooks)</span>
+                  {" "}— a pattern that emerged after NEPA&apos;s passage. This
+                  is a correlation, not proven causation.{" "}
+                  <a href="https://law.yale.edu/yls-today/news/zachary-liscow-and-leah-brooks-cost-highway-construction" target="_blank" rel="noopener noreferrer" className="text-[var(--accent)] hover:underline text-xs">[Liscow &amp; Brooks]</a>
+                </p>
+                <p className="mt-3">
+                  Separately, the U.S. takes <strong>80% longer</strong>{" "}than
+                  peer nations for permitting{" "}
+                  <span className="text-xs text-[var(--muted)]">(NAM/FAI Survey)</span>.
+                </p>
+              </div>
             ),
           },
         ]}

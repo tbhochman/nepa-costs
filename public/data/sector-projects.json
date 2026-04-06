@@ -27,7 +27,7 @@
         "capacityShare": 10,
         "capacityNote": "Only 10% of total U.S. solar increase 2010-2023"
       },
-      "keyFinding": "Fastest EIS completion of any energy sector (27 months), but 32% cancellation rate and only 10% of solar capacity goes through NEPA",
+      "keyFinding": "Fastest EIS completion of any energy sector: 27-month avg (NOI→ROD, RFF 2025). 32% cancellation rate (Bennon & Wilson, 2023)",
       "source": "RFF 2025, Bennon & Wilson 2023"
     },
     {
@@ -54,7 +54,7 @@
         "stuckInPermitting": 18581,
         "unit": "MW"
       },
-      "keyFinding": "50% litigation rate for EIS projects \u2014 highest of any clean energy sector. 50% meet 2-year target vs. 67% for solar",
+      "keyFinding": "50% EIS litigation rate — highest of any clean energy sector (RFF, 2025). 50% meet 2-year target vs. 67% for solar",
       "source": "RFF 2025, Bennon & Wilson 2023"
     },
     {
@@ -69,7 +69,7 @@
         "cancellationRate": 12,
         "litigationRate": 31
       },
-      "keyFinding": "Average 10-year timeline, with ~80% of time spent waiting for approval. Lowest cancellation rate (12%) suggests projects that survive are resilient",
+      "keyFinding": "Average 10-year end-to-end project timeline (not formal NEPA only), with ~80% of time spent waiting for approval. Lowest cancellation rate (12%)",
       "source": "Niskanen/CATF 2024, Bennon & Wilson 2023"
     },
     {
@@ -99,7 +99,7 @@
         "costPerMileChange": "3x increase from 1960s to 1980s",
         "transitCostComparison": "3x more expensive than international peers"
       },
-      "keyFinding": "FHWA EISs take 6.2 years on average \u2014 longest of any major agency. Highway costs per mile tripled post-NEPA. 33 states have rejected federal highway funding to bypass NEPA",
+      "keyFinding": "FHWA EISs take 6.2 years on average (mean NOI\u2192ROD, 2010\u20132018, CEQ) \u2014 longest of any major agency",
       "source": "CEQ 2025, Liscow/Brooks",
       "caveat": "Cost increase is correlation, not proven causation"
     },
@@ -115,7 +115,7 @@
         "shareOfEIS": 18,
         "avgEISYears": 5.1
       },
-      "keyFinding": "37% of ALL NEPA litigation targets public lands projects. Forest Service produces the most EISs (18% of total) and takes 5.1 years on average",
+      "keyFinding": "37% of all NEPA appellate litigation targets public lands (Breakthrough, 2024). Forest Service produces the most EISs (18% of total) and takes 5.1 years on average (CEQ)",
       "source": "Breakthrough Institute 2024, CEQ 2025"
     },
     {
@@ -127,7 +127,7 @@
         "cancellationRate": 22,
         "litigationRate": 50
       },
-      "keyFinding": "50% litigation rate but only 22% cancellation \u2014 pipeline projects tend to survive legal challenges",
+      "keyFinding": "50% litigation rate, 22% cancellation rate (Bennon & Wilson, 2023)",
       "source": "Bennon & Wilson 2023"
     },
     {
@@ -139,7 +139,7 @@
         "shareOfLitigation": 9,
         "agencyWinRate": 76
       },
-      "keyFinding": "9% of NEPA litigation with a 76% agency win rate \u2014 lower than other sectors, suggesting mining reviews face tougher legal scrutiny",
+      "keyFinding": "9% of NEPA litigation. Agency win rate: 76% — below the 80% overall average (Breakthrough, 2024)",
       "source": "Breakthrough Institute 2024"
     },
     {
